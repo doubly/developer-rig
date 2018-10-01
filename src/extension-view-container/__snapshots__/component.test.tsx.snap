@@ -64,6 +64,7 @@ ShallowWrapper {
           }
     }
     extensionViews={Array []}
+    isDisplayed={true}
     isLocal={true}
     manifest={
         Object {
@@ -180,6 +181,7 @@ ShallowWrapper {
                     onClick={[Function]}
           />
 </div>,
+        <Console />,
       ],
       "className": "view-container-wrapper",
     },
@@ -405,6 +407,15 @@ ShallowWrapper {
         },
         "type": "div",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -467,6 +478,7 @@ ShallowWrapper {
                         onClick={[Function]}
             />
 </div>,
+          <Console />,
         ],
         "className": "view-container-wrapper",
       },
@@ -691,6 +703,15 @@ ShallowWrapper {
             "type": [Function],
           },
           "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
       ],
       "type": "div",

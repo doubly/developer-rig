@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './component.sass';
+import { Console } from '../console';
 import { ExtensionMode } from '../constants/extension-coordinator';
 import { ExtensionView } from '../extension-view';
 import { ExtensionViewButton } from '../extension-view-button';
@@ -8,6 +9,7 @@ import { ExtensionManifest } from '../core/models/manifest';
 import { createExtensionObject } from '../util/extension';
 
 interface Props {
+  isDisplayed: boolean;
   extensionViews: RigExtensionView[];
   isLocal: boolean;
   manifest: ExtensionManifest;
@@ -73,8 +75,9 @@ export class ExtensionViewContainer extends React.Component<Props, State> {
       const root = "trigger-bar__switch" + suffix;
       return root + (this.state.mockTriggersEnabled ? ` ${root}--on` : '');
     });
+    const wrapperClassName = 'view-container-wrapper' + (this.props.isDisplayed ? '' : ' view-container-wrapper--hidden');
     return (
-      <div className='view-container-wrapper'>
+      <div className={wrapperClassName}>
         <div className="trigger-bar">
           <svg version="1.1" viewBox="0 0 44 20" height="20" width="44">
             <g onClick={this.toggleMockTriggers}>
@@ -93,6 +96,7 @@ export class ExtensionViewContainer extends React.Component<Props, State> {
             onClick={this.openExtensionViewDialog}>
           </ExtensionViewButton>
         </div>
+        <Console />
       </div>
     );
   }

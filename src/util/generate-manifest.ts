@@ -8,6 +8,7 @@ export function generateManifest(baseUri: string, ownerName: string, name: strin
     authorName: ownerName,
     bitsEnabled: false,
     description: 'Description for ' + name,
+    hasChatSupport: false,
     iconUrls: { "100x100": "https://media.forgecdn.net/avatars/158/128/636650453584584748.png" },
     id: generateId(30),
     name,

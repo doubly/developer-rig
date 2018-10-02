@@ -10,6 +10,7 @@ describe('extension', () => {
     authorName: 'test',
     bitsEnabled: true,
     description: 'test',
+    hasChatSupport: false,
     iconUrls: {
       '100x100': 'test',
     },
@@ -69,6 +70,7 @@ describe('extension', () => {
       bitsEnabled: manifest.bitsEnabled,
       clientId: manifest.id,
       description: manifest.description,
+      hasChatSupport: manifest.hasChatSupport,
       iconUrl: manifest.iconUrls['100x100'],
       iconUrls: { square100: manifest.iconUrls['100x100'] },
       id: manifest.id + ':' + index,

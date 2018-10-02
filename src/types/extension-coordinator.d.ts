@@ -61,6 +61,7 @@ declare namespace ExtensionCoordinator {
     bitsEnabled: boolean;
     clientId: string;
     description: string;
+    hasChatSupport: boolean;
     iconUrl: string;
     iconUrls: {
       square24?: string;
@@ -71,12 +72,12 @@ declare namespace ExtensionCoordinator {
     name: string;
     requestIdentityLink: boolean;
     sku: string;
+    state: ExtensionState;
     summary: string;
     token: string;
+    vendorCode: string;
     version: string;
     views: ExtensionViews;
-    vendorCode: string;
-    state: ExtensionState;
     whitelistedConfigUrls: Array<string>;
     whitelistedPanelUrls: Array<string>;
   }

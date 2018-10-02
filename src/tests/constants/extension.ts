@@ -6,6 +6,7 @@ export const createExtensionManifestForTest = (): ExtensionManifest => ({
   authorName: 'test',
   bitsEnabled: true,
   description: 'test',
+  hasChatSupport: false,
   iconUrls: {
     '100x100': 'test',
   },
@@ -47,9 +48,10 @@ export const createExtensionManifestForTest = (): ExtensionManifest => ({
 
 export const createExtensionForTest = (): ExtensionCoordinator.ExtensionObject => ({
   authorName: 'test',
-  clientId: 'mockClientId',
   bitsEnabled: false,
+  clientId: 'mockClientId',
   description: 'description',
+  hasChatSupport: false,
   iconUrl: 'iconUrl',
   iconUrls: { square100: '100x100' },
   id: 'id',

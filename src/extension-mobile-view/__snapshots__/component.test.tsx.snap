@@ -13,6 +13,7 @@ ShallowWrapper {
             "bitsEnabled": false,
             "clientId": "mockClientId",
             "description": "description",
+            "hasChatSupport": false,
             "iconUrl": "iconUrl",
             "iconUrls": Object {
               "square100": "100x100",
@@ -117,6 +118,7 @@ ShallowWrapper {
                                 "bitsEnabled": false,
                                 "clientId": "mockClientId",
                                 "description": "description",
+                                "hasChatSupport": false,
                                 "iconUrl": "iconUrl",
                                 "iconUrls": Object {
                                   "square100": "100x100",
@@ -202,6 +204,7 @@ ShallowWrapper {
                               "bitsEnabled": false,
                               "clientId": "mockClientId",
                               "description": "description",
+                              "hasChatSupport": false,
                               "iconUrl": "iconUrl",
                               "iconUrls": Object {
                                 "square100": "100x100",
@@ -284,6 +287,7 @@ ShallowWrapper {
             "bitsEnabled": false,
             "clientId": "mockClientId",
             "description": "description",
+            "hasChatSupport": false,
             "iconUrl": "iconUrl",
             "iconUrls": Object {
               "square100": "100x100",
@@ -376,6 +380,7 @@ ShallowWrapper {
                                         "bitsEnabled": false,
                                         "clientId": "mockClientId",
                                         "description": "description",
+                                        "hasChatSupport": false,
                                         "iconUrl": "iconUrl",
                                         "iconUrls": Object {
                                           "square100": "100x100",
@@ -461,6 +466,7 @@ ShallowWrapper {
                                     "bitsEnabled": false,
                                     "clientId": "mockClientId",
                                     "description": "description",
+                                    "hasChatSupport": false,
                                     "iconUrl": "iconUrl",
                                     "iconUrls": Object {
                                       "square100": "100x100",
@@ -543,6 +549,7 @@ ShallowWrapper {
               "bitsEnabled": false,
               "clientId": "mockClientId",
               "description": "description",
+              "hasChatSupport": false,
               "iconUrl": "iconUrl",
               "iconUrls": Object {
                 "square100": "100x100",

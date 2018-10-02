@@ -59,7 +59,7 @@ ShallowWrapper {
     openProductManagementHandler={[Function]}
     projects={Array []}
     selectProject={[Function]}
-    selectedView="Extension Views"
+    selectedView={0}
     session={
         Object {
             "authToken": "test",

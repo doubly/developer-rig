@@ -42,7 +42,7 @@ ShallowWrapper {
                             ]
           }
           selectProject={[Function]}
-          selectedView="Extension Views"
+          selectedView={0}
           viewerHandler={[Function]}
 />,
         <Unknown>
@@ -76,7 +76,7 @@ ShallowWrapper {
             Object {},
           ],
           "selectProject": [Function],
-          "selectedView": "Extension Views",
+          "selectedView": 0,
           "viewerHandler": [Function],
         },
         "ref": null,
@@ -156,7 +156,7 @@ ShallowWrapper {
                                   ]
             }
             selectProject={[Function]}
-            selectedView="Extension Views"
+            selectedView={0}
             viewerHandler={[Function]}
 />,
           <Unknown>
@@ -190,7 +190,7 @@ ShallowWrapper {
               Object {},
             ],
             "selectProject": [Function],
-            "selectedView": "Extension Views",
+            "selectedView": 0,
             "viewerHandler": [Function],
           },
           "ref": null,
@@ -323,7 +323,7 @@ ShallowWrapper {
                             ]
           }
           selectProject={[Function]}
-          selectedView="Extension Views"
+          selectedView={0}
           viewerHandler={[Function]}
 />,
         <Unknown>
@@ -396,7 +396,7 @@ ShallowWrapper {
             },
           ],
           "selectProject": [Function],
-          "selectedView": "Extension Views",
+          "selectedView": 0,
           "viewerHandler": [Function],
         },
         "ref": null,
@@ -533,7 +533,7 @@ ShallowWrapper {
                                   ]
             }
             selectProject={[Function]}
-            selectedView="Extension Views"
+            selectedView={0}
             viewerHandler={[Function]}
 />,
           <Unknown>
@@ -606,7 +606,7 @@ ShallowWrapper {
               },
             ],
             "selectProject": [Function],
-            "selectedView": "Extension Views",
+            "selectedView": 0,
             "viewerHandler": [Function],
           },
           "ref": null,

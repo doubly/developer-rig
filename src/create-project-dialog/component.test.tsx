@@ -97,6 +97,8 @@ describe('<CreateProjectDialog />', () => {
     });
     const { createProject } = api;
     const errorMessage = 'Test: ignore this error';
+    let { error } = console;
+    console.error = jest.fn();
     api.createProject = jest.fn().mockImplementation(() => {
       resolvePromise();
       return Promise.reject(new Error(errorMessage));
@@ -108,8 +110,10 @@ describe('<CreateProjectDialog />', () => {
     wrapper.find('input[value="none"]').simulate('change', { currentTarget: { name: 'codeGenerationOption', value: 'none' } });
     wrapper.find('.bottom-bar__save').simulate('click');
     await p;
+    [error, console.error] = [console.error, error];
     api.createProject = createProject;
     expect(wrapper.instance().state.errorMessage).toEqual(errorMessage);
+    expect(error).toHaveBeenCalledWith(new Error(errorMessage));
   });
 
   it('does not invoke saveHandler when save button is clicked', () => {

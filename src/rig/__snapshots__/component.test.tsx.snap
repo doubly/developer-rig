@@ -79,6 +79,7 @@ ShallowWrapper {
           "children": Array [
             false,
             undefined,
+            false,
             undefined,
             <CreateProjectDialog
               closeHandler={[Function]}
@@ -94,6 +95,7 @@ ShallowWrapper {
         "rendered": Array [
           false,
           undefined,
+          false,
           undefined,
           Object {
             "instance": null,
@@ -173,6 +175,7 @@ ShallowWrapper {
             "children": Array [
               false,
               undefined,
+              false,
               undefined,
               <CreateProjectDialog
                 closeHandler={[Function]}
@@ -188,6 +191,7 @@ ShallowWrapper {
           "rendered": Array [
             false,
             undefined,
+            false,
             undefined,
             Object {
               "instance": null,
@@ -373,6 +377,7 @@ ShallowWrapper {
           "children": Array [
             false,
             false,
+            false,
             <ExtensionViewContainer
               deleteExtensionViewHandler={[Function]}
               extensionViews={
@@ -410,6 +415,7 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
+          false,
           false,
           false,
           Object {
@@ -585,6 +591,7 @@ ShallowWrapper {
             "children": Array [
               false,
               false,
+              false,
               <ExtensionViewContainer
                 deleteExtensionViewHandler={[Function]}
                 extensionViews={
@@ -622,6 +629,7 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
+            false,
             false,
             false,
             Object {

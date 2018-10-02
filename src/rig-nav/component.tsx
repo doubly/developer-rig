@@ -47,7 +47,9 @@ export class RigNavComponent extends React.Component<Props> {
       'top-nav-item__selected': selectedView === NavItem.ProductManagement,
       'top-nav-item__disabled': !(session && session.login) || !(manifest && manifest.bitsEnabled),
     });
-
+    const configurationServiceClass = classNames('offset', 'top-nav-item', {
+      'top-nav-item__selected': selectedView === NavItem.ConfigurationService,
+    });
     if (this.props.error) {
       return (
         <div className='top-nav-error'>
@@ -80,6 +82,9 @@ export class RigNavComponent extends React.Component<Props> {
             </a>
             <a className={productManagementClass} onClick={(event) => this.openProductManagementHandler()}>
               Manage Bits Products
+            </a>
+            <a className={configurationServiceClass} onClick={() => this.props.viewerHandler(NavItem.ConfigurationService)}>
+              Configuration Service
             </a>
           </div>
         </div>

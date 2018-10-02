@@ -1,0 +1,1448 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConfigurationServiceView /> renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ConfigurationServiceView
+    rigProject={
+        Object {
+            "backendCommand": "test",
+            "extensionViews": Array [],
+            "frontendCommand": "test",
+            "frontendFolderName": "test",
+            "isLocal": true,
+            "manifest": Object {
+              "authorName": "test",
+              "bitsEnabled": true,
+              "description": "test",
+              "hasChatSupport": false,
+              "iconUrls": Object {
+                "100x100": "test",
+              },
+              "id": "test",
+              "name": "test",
+              "requestIdentityLink": false,
+              "sku": "test",
+              "state": "test",
+              "summary": "test",
+              "vendorCode": "test",
+              "version": "0.0.1",
+              "views": Object {
+                "component": Object {
+                  "aspectHeight": 3000,
+                  "aspectWidth": 2500,
+                  "canLinkExternalContent": false,
+                  "size": 1024,
+                  "viewerUrl": "https://test:8080",
+                  "zoom": false,
+                  "zoomPixels": 24,
+                },
+                "config": Object {
+                  "canLinkExternalContent": false,
+                  "viewerUrl": "https://test:8080",
+                },
+                "liveConfig": Object {
+                  "canLinkExternalContent": false,
+                  "viewerUrl": "https://test:8080",
+                },
+                "panel": Object {
+                  "canLinkExternalContent": false,
+                  "height": 300,
+                  "viewerUrl": "https://test:8080",
+                },
+              },
+              "whitelistedConfigUrls": Array [],
+              "whitelistedPanelUrls": Array [],
+            },
+            "projectFolderPath": "test",
+            "secret": "test",
+          }
+    }
+    saveHandler={[Function]}
+    userId="999999999"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="configuration-service-view__section configuration-service-view__section--left"
+>
+          <label
+                    className="configuration-service-view-property"
+          >
+                    <div
+                              className="configuration-service-view-property__name"
+                    >
+                              Extension Version
+                    </div>
+                    <input
+                              className="configuration-service-view-property__input"
+                              name="version"
+                              onChange={[Function]}
+                              type="text"
+                              value="0.0.1"
+                    />
+          </label>
+          <label
+                    className="configuration-service-view-property"
+          >
+                    <div
+                              className="configuration-service-view-property__name"
+                    >
+                              Configuration Type
+                    </div>
+                    <select
+                              className="configuration-service-view-property__select"
+                              name="configurationType"
+                              onChange={[Function]}
+                              value="broadcaster"
+                    >
+                              <option
+                                        value="broadcaster"
+                              >
+                                        Broadcaster
+                              </option>
+                              <option
+                                        value="developer"
+                              >
+                                        Developer
+                              </option>
+                              <option
+                                        value="global"
+                              >
+                                        Global
+                              </option>
+                    </select>
+          </label>
+          <label
+                    className="configuration-service-view-property"
+          >
+                    <div
+                              className="configuration-service-view-property__name"
+                    >
+                              Channel
+                    </div>
+                    <input
+                              className="configuration-service-view-property__input configuration-service-view-property__input--error"
+                              name="channelId"
+                              onChange={[Function]}
+                              type="text"
+                              value=""
+                    />
+          </label>
+          <label
+                    className="configuration-service-view-property"
+          >
+                    <div
+                              className="configuration-service-view-property__name"
+                    >
+                              Configuration
+                    </div>
+                    <textarea
+                              className="configuration-service-view-property__input configuration-service-view-property__input--error"
+                              name="configuration"
+                              onChange={[Function]}
+                              value=""
+                    />
+          </label>
+          <button
+                    className="configuration-service-view__button"
+                    onClick={[Function]}
+          >
+                    Save
+          </button>
+          <button
+                    className="configuration-service-view__button"
+          >
+                    Cancel
+          </button>
+</div>,
+        <div
+          className="configuration-service-view__vertical-bar"
+/>,
+        <div
+          className="configuration-service-view__section configuration-service-view__section--right"
+>
+          <div
+                    className="configuration-service-view__title"
+          >
+                    Using the Configuration Service
+          </div>
+          <p
+                    className="configuration-service-view__text"
+          >
+                    The Configuration Service can be used in your extension by leveraging specific APIs in the extension Helper.
+          </p>
+          <p
+                    className="configuration-service-view__text"
+          >
+                    To access your data in the rig, choose your version number, pick broadcaster or extension, and if appropriate search for a specific broadcaster who has installed your extension.
+          </p>
+          <p
+                    className="configuration-service-view__text"
+          >
+                    You can edit your data in the panel, but be careful if this is live data.
+          </p>
+          <button
+                    className="configuration-service-view__button configuration-service-view__button--first"
+                    onClick={[Function]}
+          >
+                    View Tutorial
+          </button>
+          <button
+                    className="configuration-service-view__button"
+                    onClick={[Function]}
+          >
+                    Go to Documentation
+          </button>
+</div>,
+      ],
+      "className": "configuration-service-view",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <label
+              className="configuration-service-view-property"
+>
+              <div
+                            className="configuration-service-view-property__name"
+              >
+                            Extension Version
+              </div>
+              <input
+                            className="configuration-service-view-property__input"
+                            name="version"
+                            onChange={[Function]}
+                            type="text"
+                            value="0.0.1"
+              />
+</label>,
+            <label
+              className="configuration-service-view-property"
+>
+              <div
+                            className="configuration-service-view-property__name"
+              >
+                            Configuration Type
+              </div>
+              <select
+                            className="configuration-service-view-property__select"
+                            name="configurationType"
+                            onChange={[Function]}
+                            value="broadcaster"
+              >
+                            <option
+                                          value="broadcaster"
+                            >
+                                          Broadcaster
+                            </option>
+                            <option
+                                          value="developer"
+                            >
+                                          Developer
+                            </option>
+                            <option
+                                          value="global"
+                            >
+                                          Global
+                            </option>
+              </select>
+</label>,
+            <label
+              className="configuration-service-view-property"
+>
+              <div
+                            className="configuration-service-view-property__name"
+              >
+                            Channel
+              </div>
+              <input
+                            className="configuration-service-view-property__input configuration-service-view-property__input--error"
+                            name="channelId"
+                            onChange={[Function]}
+                            type="text"
+                            value=""
+              />
+</label>,
+            <label
+              className="configuration-service-view-property"
+>
+              <div
+                            className="configuration-service-view-property__name"
+              >
+                            Configuration
+              </div>
+              <textarea
+                            className="configuration-service-view-property__input configuration-service-view-property__input--error"
+                            name="configuration"
+                            onChange={[Function]}
+                            value=""
+              />
+</label>,
+            <button
+              className="configuration-service-view__button"
+              onClick={[Function]}
+>
+              Save
+</button>,
+            <button
+              className="configuration-service-view__button"
+>
+              Cancel
+</button>,
+          ],
+          "className": "configuration-service-view__section configuration-service-view__section--left",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="configuration-service-view-property__name"
+>
+                  Extension Version
+</div>,
+                <input
+                  className="configuration-service-view-property__input"
+                  name="version"
+                  onChange={[Function]}
+                  type="text"
+                  value="0.0.1"
+/>,
+              ],
+              "className": "configuration-service-view-property",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Extension Version",
+                  "className": "configuration-service-view-property__name",
+                },
+                "ref": null,
+                "rendered": "Extension Version",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "configuration-service-view-property__input",
+                  "name": "version",
+                  "onChange": [Function],
+                  "type": "text",
+                  "value": "0.0.1",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="configuration-service-view-property__name"
+>
+                  Configuration Type
+</div>,
+                <select
+                  className="configuration-service-view-property__select"
+                  name="configurationType"
+                  onChange={[Function]}
+                  value="broadcaster"
+>
+                  <option
+                                    value="broadcaster"
+                  >
+                                    Broadcaster
+                  </option>
+                  <option
+                                    value="developer"
+                  >
+                                    Developer
+                  </option>
+                  <option
+                                    value="global"
+                  >
+                                    Global
+                  </option>
+</select>,
+              ],
+              "className": "configuration-service-view-property",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Configuration Type",
+                  "className": "configuration-service-view-property__name",
+                },
+                "ref": null,
+                "rendered": "Configuration Type",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <option
+                      value="broadcaster"
+>
+                      Broadcaster
+</option>,
+                    <option
+                      value="developer"
+>
+                      Developer
+</option>,
+                    <option
+                      value="global"
+>
+                      Global
+</option>,
+                  ],
+                  "className": "configuration-service-view-property__select",
+                  "name": "configurationType",
+                  "onChange": [Function],
+                  "value": "broadcaster",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Broadcaster",
+                      "value": "broadcaster",
+                    },
+                    "ref": null,
+                    "rendered": "Broadcaster",
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Developer",
+                      "value": "developer",
+                    },
+                    "ref": null,
+                    "rendered": "Developer",
+                    "type": "option",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Global",
+                      "value": "global",
+                    },
+                    "ref": null,
+                    "rendered": "Global",
+                    "type": "option",
+                  },
+                ],
+                "type": "select",
+              },
+            ],
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="configuration-service-view-property__name"
+>
+                  Channel
+</div>,
+                <input
+                  className="configuration-service-view-property__input configuration-service-view-property__input--error"
+                  name="channelId"
+                  onChange={[Function]}
+                  type="text"
+                  value=""
+/>,
+              ],
+              "className": "configuration-service-view-property",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Channel",
+                  "className": "configuration-service-view-property__name",
+                },
+                "ref": null,
+                "rendered": "Channel",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "configuration-service-view-property__input configuration-service-view-property__input--error",
+                  "name": "channelId",
+                  "onChange": [Function],
+                  "type": "text",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="configuration-service-view-property__name"
+>
+                  Configuration
+</div>,
+                <textarea
+                  className="configuration-service-view-property__input configuration-service-view-property__input--error"
+                  name="configuration"
+                  onChange={[Function]}
+                  value=""
+/>,
+              ],
+              "className": "configuration-service-view-property",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Configuration",
+                  "className": "configuration-service-view-property__name",
+                },
+                "ref": null,
+                "rendered": "Configuration",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "configuration-service-view-property__input configuration-service-view-property__input--error",
+                  "name": "configuration",
+                  "onChange": [Function],
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "textarea",
+              },
+            ],
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Save",
+              "className": "configuration-service-view__button",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Save",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Cancel",
+              "className": "configuration-service-view__button",
+            },
+            "ref": null,
+            "rendered": "Cancel",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "configuration-service-view__vertical-bar",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="configuration-service-view__title"
+>
+              Using the Configuration Service
+</div>,
+            <p
+              className="configuration-service-view__text"
+>
+              The Configuration Service can be used in your extension by leveraging specific APIs in the extension Helper.
+</p>,
+            <p
+              className="configuration-service-view__text"
+>
+              To access your data in the rig, choose your version number, pick broadcaster or extension, and if appropriate search for a specific broadcaster who has installed your extension.
+</p>,
+            <p
+              className="configuration-service-view__text"
+>
+              You can edit your data in the panel, but be careful if this is live data.
+</p>,
+            <button
+              className="configuration-service-view__button configuration-service-view__button--first"
+              onClick={[Function]}
+>
+              View Tutorial
+</button>,
+            <button
+              className="configuration-service-view__button"
+              onClick={[Function]}
+>
+              Go to Documentation
+</button>,
+          ],
+          "className": "configuration-service-view__section configuration-service-view__section--right",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Using the Configuration Service",
+              "className": "configuration-service-view__title",
+            },
+            "ref": null,
+            "rendered": "Using the Configuration Service",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "The Configuration Service can be used in your extension by leveraging specific APIs in the extension Helper.",
+              "className": "configuration-service-view__text",
+            },
+            "ref": null,
+            "rendered": "The Configuration Service can be used in your extension by leveraging specific APIs in the extension Helper.",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "To access your data in the rig, choose your version number, pick broadcaster or extension, and if appropriate search for a specific broadcaster who has installed your extension.",
+              "className": "configuration-service-view__text",
+            },
+            "ref": null,
+            "rendered": "To access your data in the rig, choose your version number, pick broadcaster or extension, and if appropriate search for a specific broadcaster who has installed your extension.",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "You can edit your data in the panel, but be careful if this is live data.",
+              "className": "configuration-service-view__text",
+            },
+            "ref": null,
+            "rendered": "You can edit your data in the panel, but be careful if this is live data.",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "View Tutorial",
+              "className": "configuration-service-view__button configuration-service-view__button--first",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "View Tutorial",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Go to Documentation",
+              "className": "configuration-service-view__button",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Go to Documentation",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="configuration-service-view__section configuration-service-view__section--left"
+>
+            <label
+                        className="configuration-service-view-property"
+            >
+                        <div
+                                    className="configuration-service-view-property__name"
+                        >
+                                    Extension Version
+                        </div>
+                        <input
+                                    className="configuration-service-view-property__input"
+                                    name="version"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value="0.0.1"
+                        />
+            </label>
+            <label
+                        className="configuration-service-view-property"
+            >
+                        <div
+                                    className="configuration-service-view-property__name"
+                        >
+                                    Configuration Type
+                        </div>
+                        <select
+                                    className="configuration-service-view-property__select"
+                                    name="configurationType"
+                                    onChange={[Function]}
+                                    value="broadcaster"
+                        >
+                                    <option
+                                                value="broadcaster"
+                                    >
+                                                Broadcaster
+                                    </option>
+                                    <option
+                                                value="developer"
+                                    >
+                                                Developer
+                                    </option>
+                                    <option
+                                                value="global"
+                                    >
+                                                Global
+                                    </option>
+                        </select>
+            </label>
+            <label
+                        className="configuration-service-view-property"
+            >
+                        <div
+                                    className="configuration-service-view-property__name"
+                        >
+                                    Channel
+                        </div>
+                        <input
+                                    className="configuration-service-view-property__input configuration-service-view-property__input--error"
+                                    name="channelId"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value=""
+                        />
+            </label>
+            <label
+                        className="configuration-service-view-property"
+            >
+                        <div
+                                    className="configuration-service-view-property__name"
+                        >
+                                    Configuration
+                        </div>
+                        <textarea
+                                    className="configuration-service-view-property__input configuration-service-view-property__input--error"
+                                    name="configuration"
+                                    onChange={[Function]}
+                                    value=""
+                        />
+            </label>
+            <button
+                        className="configuration-service-view__button"
+                        onClick={[Function]}
+            >
+                        Save
+            </button>
+            <button
+                        className="configuration-service-view__button"
+            >
+                        Cancel
+            </button>
+</div>,
+          <div
+            className="configuration-service-view__vertical-bar"
+/>,
+          <div
+            className="configuration-service-view__section configuration-service-view__section--right"
+>
+            <div
+                        className="configuration-service-view__title"
+            >
+                        Using the Configuration Service
+            </div>
+            <p
+                        className="configuration-service-view__text"
+            >
+                        The Configuration Service can be used in your extension by leveraging specific APIs in the extension Helper.
+            </p>
+            <p
+                        className="configuration-service-view__text"
+            >
+                        To access your data in the rig, choose your version number, pick broadcaster or extension, and if appropriate search for a specific broadcaster who has installed your extension.
+            </p>
+            <p
+                        className="configuration-service-view__text"
+            >
+                        You can edit your data in the panel, but be careful if this is live data.
+            </p>
+            <button
+                        className="configuration-service-view__button configuration-service-view__button--first"
+                        onClick={[Function]}
+            >
+                        View Tutorial
+            </button>
+            <button
+                        className="configuration-service-view__button"
+                        onClick={[Function]}
+            >
+                        Go to Documentation
+            </button>
+</div>,
+        ],
+        "className": "configuration-service-view",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <label
+                className="configuration-service-view-property"
+>
+                <div
+                                className="configuration-service-view-property__name"
+                >
+                                Extension Version
+                </div>
+                <input
+                                className="configuration-service-view-property__input"
+                                name="version"
+                                onChange={[Function]}
+                                type="text"
+                                value="0.0.1"
+                />
+</label>,
+              <label
+                className="configuration-service-view-property"
+>
+                <div
+                                className="configuration-service-view-property__name"
+                >
+                                Configuration Type
+                </div>
+                <select
+                                className="configuration-service-view-property__select"
+                                name="configurationType"
+                                onChange={[Function]}
+                                value="broadcaster"
+                >
+                                <option
+                                                value="broadcaster"
+                                >
+                                                Broadcaster
+                                </option>
+                                <option
+                                                value="developer"
+                                >
+                                                Developer
+                                </option>
+                                <option
+                                                value="global"
+                                >
+                                                Global
+                                </option>
+                </select>
+</label>,
+              <label
+                className="configuration-service-view-property"
+>
+                <div
+                                className="configuration-service-view-property__name"
+                >
+                                Channel
+                </div>
+                <input
+                                className="configuration-service-view-property__input configuration-service-view-property__input--error"
+                                name="channelId"
+                                onChange={[Function]}
+                                type="text"
+                                value=""
+                />
+</label>,
+              <label
+                className="configuration-service-view-property"
+>
+                <div
+                                className="configuration-service-view-property__name"
+                >
+                                Configuration
+                </div>
+                <textarea
+                                className="configuration-service-view-property__input configuration-service-view-property__input--error"
+                                name="configuration"
+                                onChange={[Function]}
+                                value=""
+                />
+</label>,
+              <button
+                className="configuration-service-view__button"
+                onClick={[Function]}
+>
+                Save
+</button>,
+              <button
+                className="configuration-service-view__button"
+>
+                Cancel
+</button>,
+            ],
+            "className": "configuration-service-view__section configuration-service-view__section--left",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="configuration-service-view-property__name"
+>
+                    Extension Version
+</div>,
+                  <input
+                    className="configuration-service-view-property__input"
+                    name="version"
+                    onChange={[Function]}
+                    type="text"
+                    value="0.0.1"
+/>,
+                ],
+                "className": "configuration-service-view-property",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Extension Version",
+                    "className": "configuration-service-view-property__name",
+                  },
+                  "ref": null,
+                  "rendered": "Extension Version",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "configuration-service-view-property__input",
+                    "name": "version",
+                    "onChange": [Function],
+                    "type": "text",
+                    "value": "0.0.1",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="configuration-service-view-property__name"
+>
+                    Configuration Type
+</div>,
+                  <select
+                    className="configuration-service-view-property__select"
+                    name="configurationType"
+                    onChange={[Function]}
+                    value="broadcaster"
+>
+                    <option
+                                        value="broadcaster"
+                    >
+                                        Broadcaster
+                    </option>
+                    <option
+                                        value="developer"
+                    >
+                                        Developer
+                    </option>
+                    <option
+                                        value="global"
+                    >
+                                        Global
+                    </option>
+</select>,
+                ],
+                "className": "configuration-service-view-property",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Configuration Type",
+                    "className": "configuration-service-view-property__name",
+                  },
+                  "ref": null,
+                  "rendered": "Configuration Type",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <option
+                        value="broadcaster"
+>
+                        Broadcaster
+</option>,
+                      <option
+                        value="developer"
+>
+                        Developer
+</option>,
+                      <option
+                        value="global"
+>
+                        Global
+</option>,
+                    ],
+                    "className": "configuration-service-view-property__select",
+                    "name": "configurationType",
+                    "onChange": [Function],
+                    "value": "broadcaster",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Broadcaster",
+                        "value": "broadcaster",
+                      },
+                      "ref": null,
+                      "rendered": "Broadcaster",
+                      "type": "option",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Developer",
+                        "value": "developer",
+                      },
+                      "ref": null,
+                      "rendered": "Developer",
+                      "type": "option",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Global",
+                        "value": "global",
+                      },
+                      "ref": null,
+                      "rendered": "Global",
+                      "type": "option",
+                    },
+                  ],
+                  "type": "select",
+                },
+              ],
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="configuration-service-view-property__name"
+>
+                    Channel
+</div>,
+                  <input
+                    className="configuration-service-view-property__input configuration-service-view-property__input--error"
+                    name="channelId"
+                    onChange={[Function]}
+                    type="text"
+                    value=""
+/>,
+                ],
+                "className": "configuration-service-view-property",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Channel",
+                    "className": "configuration-service-view-property__name",
+                  },
+                  "ref": null,
+                  "rendered": "Channel",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "configuration-service-view-property__input configuration-service-view-property__input--error",
+                    "name": "channelId",
+                    "onChange": [Function],
+                    "type": "text",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="configuration-service-view-property__name"
+>
+                    Configuration
+</div>,
+                  <textarea
+                    className="configuration-service-view-property__input configuration-service-view-property__input--error"
+                    name="configuration"
+                    onChange={[Function]}
+                    value=""
+/>,
+                ],
+                "className": "configuration-service-view-property",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Configuration",
+                    "className": "configuration-service-view-property__name",
+                  },
+                  "ref": null,
+                  "rendered": "Configuration",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "configuration-service-view-property__input configuration-service-view-property__input--error",
+                    "name": "configuration",
+                    "onChange": [Function],
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "textarea",
+                },
+              ],
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Save",
+                "className": "configuration-service-view__button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Save",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Cancel",
+                "className": "configuration-service-view__button",
+              },
+              "ref": null,
+              "rendered": "Cancel",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "configuration-service-view__vertical-bar",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="configuration-service-view__title"
+>
+                Using the Configuration Service
+</div>,
+              <p
+                className="configuration-service-view__text"
+>
+                The Configuration Service can be used in your extension by leveraging specific APIs in the extension Helper.
+</p>,
+              <p
+                className="configuration-service-view__text"
+>
+                To access your data in the rig, choose your version number, pick broadcaster or extension, and if appropriate search for a specific broadcaster who has installed your extension.
+</p>,
+              <p
+                className="configuration-service-view__text"
+>
+                You can edit your data in the panel, but be careful if this is live data.
+</p>,
+              <button
+                className="configuration-service-view__button configuration-service-view__button--first"
+                onClick={[Function]}
+>
+                View Tutorial
+</button>,
+              <button
+                className="configuration-service-view__button"
+                onClick={[Function]}
+>
+                Go to Documentation
+</button>,
+            ],
+            "className": "configuration-service-view__section configuration-service-view__section--right",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Using the Configuration Service",
+                "className": "configuration-service-view__title",
+              },
+              "ref": null,
+              "rendered": "Using the Configuration Service",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "The Configuration Service can be used in your extension by leveraging specific APIs in the extension Helper.",
+                "className": "configuration-service-view__text",
+              },
+              "ref": null,
+              "rendered": "The Configuration Service can be used in your extension by leveraging specific APIs in the extension Helper.",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "To access your data in the rig, choose your version number, pick broadcaster or extension, and if appropriate search for a specific broadcaster who has installed your extension.",
+                "className": "configuration-service-view__text",
+              },
+              "ref": null,
+              "rendered": "To access your data in the rig, choose your version number, pick broadcaster or extension, and if appropriate search for a specific broadcaster who has installed your extension.",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "You can edit your data in the panel, but be careful if this is live data.",
+                "className": "configuration-service-view__text",
+              },
+              "ref": null,
+              "rendered": "You can edit your data in the panel, but be careful if this is live data.",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "View Tutorial",
+                "className": "configuration-service-view__button configuration-service-view__button--first",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "View Tutorial",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Go to Documentation",
+                "className": "configuration-service-view__button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Go to Documentation",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

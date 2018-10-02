@@ -18,6 +18,7 @@ import { SignInDialog } from '../sign-in-dialog';
 import { ExtensionMode, ExtensionViewType } from '../constants/extension-coordinator';
 import { ProjectView } from '../project-view';
 import { CreateProjectDialog } from '../create-project-dialog';
+import { ConfigurationServiceView } from '../configuration-service-view';
 
 enum LocalStorageKeys {
   RigLogin = 'rigLogin',
@@ -225,6 +226,11 @@ export class RigComponent extends React.Component<Props, State> {
               userId={this.state.userId}
               onChange={this.updateProject}
               refreshViews={this.refreshViews}
+            />}
+            {this.state.selectedView === NavItem.ConfigurationService && <ConfigurationServiceView
+              rigProject={currentProject}
+              userId={this.state.userId}
+              saveHandler={(configuration: string) => { }}
             />}
             {currentProject && <ExtensionViewContainer
               key={`ExtensionViewContainer${this.state.extensionsViewContainerKey}`}

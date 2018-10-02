@@ -45,7 +45,7 @@ describe('<RigNavComponent />', () => {
     wrapper.find('a.top-nav-item').forEach((tab: any) => {
       tab.simulate('click');
     });
-    expect(wrapper.instance().props.viewerHandler).toHaveBeenCalledTimes(3);
+    expect(wrapper.instance().props.viewerHandler).toHaveBeenCalledTimes(4);
   });
 
   it('correct css classes are set when things are selected', () => {

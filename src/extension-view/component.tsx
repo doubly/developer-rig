@@ -243,12 +243,12 @@ export class ExtensionView extends React.Component<Props, State> {
 
             {this.isEditable() &&
               <div className='view__edit_button'
-                onClick={() => { this.props.openEditViewHandler(this.props.id) }}>
+                onClick={() => this.props.openEditViewHandler(this.props.id)}>
                 Edit
               </div>}
           </div>
           <div className={buttonClassName}
-            onClick={() => { this.props.deleteViewHandler(this.props.id) }}>
+            onClick={() => this.props.deleteViewHandler(this.props.id)}>
             <img
               alt='Close'
               src={closeButton}

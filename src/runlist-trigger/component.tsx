@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { RunList, GenericResponse } from '../core/models/run-list';
 import './component.sass';
+import classNames = require('classnames');
+import { RunList, GenericResponse } from '../core/models/run-list';
 
 const ExtensionOnContext = 'twitch-ext-context';
 const ExtensionOnAuthorized = 'twitch-ext-auth';
@@ -113,14 +114,14 @@ export class RunListTrigger extends React.Component<Props, State>{
   }
 
   public render() {
-    let textClassName = 'runlist-trigger__text';
+    const textClassName = classNames('runlist-trigger__text', {
+      'runlist-trigger__text--on': this.state.triggerState === TriggerState.Visible,
+      'runlist-trigger__text--fading': this.state.triggerState === TriggerState.Fading,
+    });
     if (this.state.triggerState === TriggerState.Visible) {
-      textClassName += ' runlist-trigger__text--on';
       setTimeout(() => {
         this.setState({ triggerState: TriggerState.Fading });
-      }, 1);
-    } else if (this.state.triggerState === TriggerState.Fading) {
-      textClassName += ' runlist-trigger__text--fading';
+      });
     }
     return (
       <div className='runlist-trigger'>

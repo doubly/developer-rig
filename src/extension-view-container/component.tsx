@@ -1,5 +1,6 @@
 import * as React from 'react';
 import './component.sass';
+import classNames = require('classnames');
 import { Console } from '../console';
 import { ExtensionMode } from '../constants/extension-coordinator';
 import { ExtensionView } from '../extension-view';
@@ -73,9 +74,13 @@ export class ExtensionViewContainer extends React.Component<Props, State> {
     }
     const [switchClassName, handleClassName, checkClassName] = ['', '-handle', '-check'].map((suffix) => {
       const root = "trigger-bar__switch" + suffix;
-      return root + (this.state.mockTriggersEnabled ? ` ${root}--on` : '');
+      return classNames(root, {
+        [`${root}--on`]: this.state.mockTriggersEnabled,
+      });
     });
-    const wrapperClassName = 'view-container-wrapper' + (this.props.isDisplayed ? '' : ' view-container-wrapper--hidden');
+    const wrapperClassName = classNames('view-container-wrapper', {
+      'view-container-wrapper--hidden': !this.props.isDisplayed,
+    });
     return (
       <div className={wrapperClassName}>
         <div className="trigger-bar">

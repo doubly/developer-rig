@@ -14,26 +14,29 @@
   let listeners = {};
   let webSocket;
 
+  window.addEventListener('DOMContentLoaded', (_) => {
+    webSocket = new WebSocket('wss://localhost.rig.twitch.tv:3003');
+    webSocket.addEventListener('message', function(event) {
+      if (authData) {
+        let message = JSON.parse(event.data);
+        if (message.type === 'MESSAGE') {
+          const [channelId, clientId, target] = message.data.topic.split('.').pop().split('-');
+          if (authData.channelId === channelId && authData.clientId === clientId) {
+            const targetListeners = listeners[target];
+            if (targetListeners) {
+              message = JSON.parse(message.data.message);
+              targetListeners.forEach(fn => fn(target, message.content_type, message.content[0]));
+            }
+          }
+        }
+      }
+    });
+  });
+
   window.addEventListener("message", event => {
     if (event.data) {
       switch (event.data.action) {
         case "extension-frame-authorize-response":
-          webSocket = new WebSocket("wss://localhost.rig.twitch.tv:3003");
-          webSocket.addEventListener('message', function(event) {
-            let message = JSON.parse(event.data);
-            if (message.type === 'MESSAGE') {
-              const [channelId, clientId, target] = message.data.topic.split('.').pop().split('-');
-              if (authData.channelId === channelId && authData.clientId === clientId) {
-                const targetListeners = listeners[target];
-                if (targetListeners) {
-                  message = JSON.parse(message.data.message);
-                  targetListeners.forEach(fn => {
-                    fn(target, message.content_type, message.content[0]);
-                  });
-                }
-              }
-            }
-          });
 
           authData = Object.assign({}, event.data.response);
           authCallback(authData);

@@ -1,10 +1,8 @@
 import * as React from 'react';
 import './component.sass';
 import classNames = require('classnames');
+import { ExtensionAction } from '../constants/extension-coordinator';
 import { RunList, GenericResponse } from '../core/models/run-list';
-
-const ExtensionOnContext = 'twitch-ext-context';
-const ExtensionOnAuthorized = 'twitch-ext-auth';
 
 export interface PublicProps {
   runList: RunList;
@@ -77,13 +75,13 @@ export class RunListTrigger extends React.Component<Props, State>{
     switch (this.state.triggerTypeMap[trigger]) {
       case 'onContext':
         data = {
-          action: ExtensionOnContext,
+          action: ExtensionAction.TwitchExtContext,
           context: response,
         }
         break;
       case 'onAuthorized':
         data = {
-          action: ExtensionOnAuthorized,
+          action: ExtensionAction.TwitchExtAuth,
           auth: response,
         }
         break;

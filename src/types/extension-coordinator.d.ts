@@ -82,9 +82,21 @@ declare namespace ExtensionCoordinator {
     whitelistedPanelUrls: Array<string>;
   }
 
+  interface Segment {
+    content: string;
+    version: string;
+  }
+
+  interface Configuration {
+    broadcaster?: Segment;
+    developer?: Segment;
+    global?: Segment;
+  }
+
   interface ExtensionFrameOptions {
     anchor: ExtensionAnchor;
     channelId: number;
+    configuration?: Configuration;
     extension: ExtensionObject;
     features?: Partial<{
       bits: boolean,

@@ -33,11 +33,10 @@
         method: 'POST',
       }).catch(reason => console.error(url, reason));
     },
-    'twitch-ext-auth': (event) => {
+    'twitch-ext-loaded': (event) => {
       const ext = document.getElementById('extension-frame').getElementsByTagName('iframe')[0].contentWindow;
       ext.postMessage(event.data, '*');
     },
-    'twitch-ext-context': (event) => actions['twitch-ext-auth'](event),
     'twitch-ext-rig-log': (event) => {
       window.parent.postMessage(event.data, '*');
     },

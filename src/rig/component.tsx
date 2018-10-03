@@ -189,7 +189,8 @@ export class RigComponent extends React.Component<Props, State> {
     const selectedProject = this.state.projects[projectIndex];
     if (selectedProject !== this.state.currentProject) {
       await stopHosting();
-      this.setState({ currentProject: selectedProject });
+      this.setState({ currentProject: selectedProject, selectedView: NavItem.ProjectOverview });
+      this.refreshViews();
       localStorage.setItem('currentProjectIndex', this.currentProjectIndex.toString());
     }
   }
@@ -266,7 +267,7 @@ export class RigComponent extends React.Component<Props, State> {
   }
 
   private refreshViews = () => {
-    ++this.state.extensionsViewContainerKey;
+    this.setState((previousState) => ({ extensionsViewContainerKey: previousState.extensionsViewContainerKey + 1 }));
   }
 
   public updateExtensionViews(extensionViews: RigExtensionView[]) {

@@ -82,7 +82,7 @@ declare namespace ExtensionCoordinator {
     whitelistedPanelUrls: Array<string>;
   }
 
-  interface ExtensionFrameParams {
+  interface ExtensionFrameOptions {
     anchor: ExtensionAnchor;
     channelId: number;
     extension: ExtensionObject;
@@ -98,10 +98,6 @@ declare namespace ExtensionCoordinator {
     mode: ExtensionMode;
     platform: ExtensionPlatform;
     trackingProperties: {};
-  }
-
-  interface ExtensionFrame {
-    new(params: ExtensionFrameParams): ExtensionFrame;
   }
 
   interface ComponentViewSizeProps {

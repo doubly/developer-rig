@@ -31,6 +31,7 @@ export const PanelViewDimensions = Object.freeze({
 interface Props {
   id: string;
   channelId: string;
+  configuration: ExtensionCoordinator.Configuration;
   extension: ExtensionCoordinator.ExtensionObject;
   installationAbilities: ExtensionCoordinator.ExtensionInstallationAbilities;
   type: string;
@@ -106,6 +107,7 @@ export class ExtensionView extends React.Component<Props, State> {
             bindIframeToParent={this.bindIframeToParent}
             channelId={this.props.channelId}
             className="view"
+            configuration={this.props.configuration}
             extension={this.props.extension}
             frameSize={this.props.frameSize}
             id={`component-${this.props.id}`}
@@ -121,6 +123,7 @@ export class ExtensionView extends React.Component<Props, State> {
             bindIframeToParent={this.bindIframeToParent}
             channelId={this.props.channelId}
             className="view"
+            configuration={this.props.configuration}
             extension={this.props.extension}
             frameSize={this.props.frameSize}
             id={`mobile-${this.props.id}`}
@@ -138,6 +141,7 @@ export class ExtensionView extends React.Component<Props, State> {
               bindIframeToParent={this.bindIframeToParent}
               channelId={this.props.channelId}
               className="view"
+              configuration={this.props.configuration}
               extension={this.props.extension}
               frameId={`frameid-${this.props.id}`}
               installationAbilities={this.props.installationAbilities}
@@ -156,6 +160,7 @@ export class ExtensionView extends React.Component<Props, State> {
               bindIframeToParent={this.bindIframeToParent}
               channelId={this.props.channelId}
               className="view"
+              configuration={this.props.configuration}
               extension={this.props.extension}
               frameId={`frameid-${this.props.id}`}
               installationAbilities={this.props.installationAbilities}

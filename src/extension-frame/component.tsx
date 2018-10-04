@@ -8,6 +8,7 @@ const EXTENSION_FRAME_INIT_ACTION = 'extension-frame-init';
 export interface Props {
   channelId: string;
   className: string;
+  configuration: ExtensionCoordinator.Configuration;
   frameId: string;
   extension: ExtensionCoordinator.ExtensionObject;
   installationAbilities: ExtensionCoordinator.ExtensionInstallationAbilities;
@@ -47,6 +48,7 @@ export class ExtensionFrame extends React.Component<Props> {
     const extensionFrameOptions: ExtensionCoordinator.ExtensionFrameOptions = {
       anchor: this.props.type as ExtensionCoordinator.ExtensionAnchor,
       channelId: parseInt(this.props.channelId, 10),
+      configuration: this.props.configuration,
       extension: this.props.extension,
       iframeClassName: IFRAME_CLASS,
       installationAbilities: this.props.installationAbilities,

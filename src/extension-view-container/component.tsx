@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './component.sass';
 import classNames = require('classnames');
+import { Configurations } from '../core/models/rig';
 import { Console } from '../console';
 import { ExtensionMode } from '../constants/extension-coordinator';
 import { ExtensionView } from '../extension-view';
@@ -10,6 +11,7 @@ import { ExtensionManifest } from '../core/models/manifest';
 import { createExtensionObject } from '../util/extension';
 
 interface Props {
+  configurations?: Configurations;
   isDisplayed: boolean;
   extensionViews: RigExtensionView[];
   isLocal: boolean;
@@ -42,6 +44,26 @@ export class ExtensionViewContainer extends React.Component<Props, State> {
     this.setState((previousState) => ({ mockTriggersEnabled: !previousState.mockTriggersEnabled }));
   }
 
+  private constructConfiguration(channelId: string): ExtensionCoordinator.Configuration {
+    const configuration: ExtensionCoordinator.Configuration = {};
+    if (this.props.configurations) {
+      const { configurations: { globalSegment, channelSegments } } = this.props;
+      if (globalSegment) {
+        configuration.global = globalSegment;
+      }
+      const segments = channelSegments[channelId];
+      if (segments) {
+        if (segments.broadcaster) {
+          configuration.broadcaster = segments.broadcaster;
+        }
+        if (segments.developer) {
+          configuration.developer = segments.developer;
+        }
+      }
+    }
+    return configuration;
+  }
+
   public render() {
     let extensionViews: JSX.Element[] = [];
     if (this.props.extensionViews && this.props.extensionViews.length > 0) {
@@ -49,11 +71,13 @@ export class ExtensionViewContainer extends React.Component<Props, State> {
         const linkedUserId = view.linked ? view.linkedUserId : '';
         const extension = createExtensionObject(this.props.manifest, index.toString(), view.role,
           linkedUserId, view.channelId, this.props.secret, view.opaqueId);
+        const configuration = this.constructConfiguration(view.channelId);
         return (
           <ExtensionView
             key={view.id}
             id={view.id}
             channelId={view.channelId}
+            configuration={configuration}
             extension={extension}
             installationAbilities={view.features}
             type={view.type}

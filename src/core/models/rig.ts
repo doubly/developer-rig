@@ -1,4 +1,5 @@
 import { ExtensionManifest } from './manifest';
+import { SegmentMap } from '../../util/api';
 
 export interface RigProject {
   extensionViews: RigExtensionView[],
@@ -35,4 +36,13 @@ export interface RigExtensionView {
 export interface FrameSize {
   height: number;
   width: number;
+}
+
+export interface ChannelSegments {
+  [channelId: string]: SegmentMap;
+}
+
+export interface Configurations {
+  globalSegment: ExtensionCoordinator.Segment;
+  channelSegments: ChannelSegments;
 }

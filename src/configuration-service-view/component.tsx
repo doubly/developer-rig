@@ -1,9 +1,10 @@
 import * as React from 'react';
 import './component.sass';
-import { RigProject } from '../core/models/rig';
+import { Configurations, RigProject } from '../core/models/rig';
 import classNames = require('classnames');
 
 export interface Props {
+  configurations?: Configurations;
   rigProject: RigProject,
   userId: string;
   saveHandler: (configuration: string) => void,

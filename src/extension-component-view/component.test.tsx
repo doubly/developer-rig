@@ -5,6 +5,7 @@ import { createExtensionForTest } from '../tests/constants/extension';
 
 const setupShallow = setupShallowTest(ExtensionComponentView, () => ({
   channelId: 'twitch',
+  configuration: {},
   id: '1',
   extension: createExtensionForTest(),
   frameSize: { width: 800, height: 600 },

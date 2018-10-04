@@ -11,7 +11,7 @@ import { ExtensionAnchor, ExtensionViewType } from '../constants/extension-coord
 
 let globalAny = global as any;
 
-localStorage.setItem('projects', '[{},{}]');
+localStorage.setItem('projects', '[{"manifest":{}},{"manifest":{}}]');
 
 const setupShallow = setupShallowTest(RigComponent, () => ({
   session: { displayName: 'test', login: 'test', id: 'test', profileImageUrl: 'test.png', authToken: 'test' },
@@ -38,7 +38,7 @@ describe('<RigComponent />', () => {
     });
   });
 
-  it('renders extension view correctly', () => {
+  it('renders extension view correctly', async () => {
     setUpProjectForTest(ExtensionAnchor.Panel);
     const { wrapper } = setupShallow();
     return new Promise((resolve, reject) => {
@@ -266,13 +266,24 @@ describe('<RigComponent />', () => {
 
   it('creates project', async () => {
     const { wrapper } = setupShallow();
-    const instance = wrapper.instance() as RigComponent;
-    const extensionViews = createViewsForTest(1, ExtensionAnchors[ExtensionAnchor.Panel], ViewerTypes.LoggedOut);
-    await instance.createProject({ extensionViews } as RigProject);
-    expect(globalAny.fetch).toHaveBeenCalled();
+    return new Promise((resolve, reject) => {
+      setTimeout(async () => {
+        try {
+          wrapper.update();
+          const instance = wrapper.instance() as RigComponent;
+          const extensionViews = createViewsForTest(1, ExtensionAnchors[ExtensionAnchor.Panel], ViewerTypes.LoggedOut);
+          await instance.createProject({ extensionViews } as RigProject);
+          expect(globalAny.fetch).toHaveBeenCalled();
+          resolve();
+        } catch (ex) {
+          reject(ex.message);
+        }
+      });
+    });
   });
 
   it('selects project', async () => {
+    setUpProjectForTest(ExtensionAnchor.Panel);
     const { wrapper } = setupShallow();
     const instance = wrapper.instance() as RigComponent;
     await instance.selectProject(1);

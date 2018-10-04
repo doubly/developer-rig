@@ -7,6 +7,7 @@ import { ExtensionViewType, ExtensionAnchor, ExtensionMode } from '../constants/
 const defaultPropGenerator = () => ({
   channelId: 'twitch',
   className: 'view',
+  configuration: {},
   frameId: '0',
   installationAbilities: {
     isChatEnabled: true,
@@ -41,6 +42,7 @@ describe('<ExtensionFrame />', () => {
       parameters: {
         anchor: 'panel',
         channelId: NaN,
+        configuration: {},
         extension: {
           authorName: 'test',
           bitsEnabled: false,
@@ -125,6 +127,7 @@ describe('<ExtensionFrame />', () => {
       parameters: {
         anchor: 'mobile',
         channelId: NaN,
+        configuration: {},
         extension: {
           authorName: 'test',
           bitsEnabled: false,

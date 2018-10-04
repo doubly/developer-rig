@@ -293,6 +293,7 @@ ShallowWrapper {
 />,
         <Unknown>
           <ExtensionViewContainer
+                    configurations={undefined}
                     deleteExtensionViewHandler={[Function]}
                     extensionViews={
                               Array [
@@ -379,6 +380,7 @@ ShallowWrapper {
             false,
             false,
             <ExtensionViewContainer
+              configurations={undefined}
               deleteExtensionViewHandler={[Function]}
               extensionViews={
                             Array [
@@ -423,6 +425,7 @@ ShallowWrapper {
             "key": "ExtensionViewContainer0",
             "nodeType": "class",
             "props": Object {
+              "configurations": undefined,
               "deleteExtensionViewHandler": [Function],
               "extensionViews": Array [
                 Object {
@@ -507,6 +510,7 @@ ShallowWrapper {
 />,
           <Unknown>
             <ExtensionViewContainer
+                        configurations={undefined}
                         deleteExtensionViewHandler={[Function]}
                         extensionViews={
                                     Array [
@@ -593,6 +597,7 @@ ShallowWrapper {
               false,
               false,
               <ExtensionViewContainer
+                configurations={undefined}
                 deleteExtensionViewHandler={[Function]}
                 extensionViews={
                                 Array [
@@ -637,6 +642,7 @@ ShallowWrapper {
               "key": "ExtensionViewContainer0",
               "nodeType": "class",
               "props": Object {
+                "configurations": undefined,
                 "deleteExtensionViewHandler": [Function],
                 "extensionViews": Array [
                   Object {

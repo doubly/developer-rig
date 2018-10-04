@@ -32,29 +32,20 @@ ShallowWrapper {
       "children": Array [
         <Connect(RigNavComponent)
           createNewProject={[Function]}
-          currentProjectIndex={0}
+          currentProjectIndex={-1}
           error={undefined}
-          manifest={undefined}
-          projects={
-                    Array [
-                              Object {},
-                              Object {},
-                            ]
-          }
+          manifest={null}
+          projects={Array []}
           selectProject={[Function]}
-          selectedView={0}
+          selectedView={2}
           viewerHandler={[Function]}
 />,
         <Unknown>
-          <ExtensionViewContainer
-                    deleteExtensionViewHandler={[Function]}
-                    extensionViews={undefined}
-                    isDisplayed={true}
-                    isLocal={undefined}
-                    manifest={undefined}
-                    openEditViewHandler={[Function]}
-                    openExtensionViewHandler={[Function]}
-                    secret={undefined}
+          <CreateProjectDialog
+                    closeHandler={[Function]}
+                    mustSave={true}
+                    saveHandler={[Function]}
+                    userId={undefined}
           />
 </Unknown>,
       ],
@@ -68,15 +59,12 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "createNewProject": [Function],
-          "currentProjectIndex": 0,
+          "currentProjectIndex": -1,
           "error": undefined,
-          "manifest": undefined,
-          "projects": Array [
-            Object {},
-            Object {},
-          ],
+          "manifest": null,
+          "projects": Array [],
           "selectProject": [Function],
-          "selectedView": 0,
+          "selectedView": 2,
           "viewerHandler": [Function],
         },
         "ref": null,
@@ -90,18 +78,14 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             false,
-            false,
-            <ExtensionViewContainer
-              deleteExtensionViewHandler={[Function]}
-              extensionViews={undefined}
-              isDisplayed={true}
-              isLocal={undefined}
-              manifest={undefined}
-              openEditViewHandler={[Function]}
-              openExtensionViewHandler={[Function]}
-              secret={undefined}
+            undefined,
+            undefined,
+            <CreateProjectDialog
+              closeHandler={[Function]}
+              mustSave={true}
+              saveHandler={[Function]}
+              userId={undefined}
 />,
-            false,
             false,
             false,
           ],
@@ -109,26 +93,22 @@ ShallowWrapper {
         "ref": null,
         "rendered": Array [
           false,
-          false,
+          undefined,
+          undefined,
           Object {
             "instance": null,
-            "key": "ExtensionViewContainer0",
+            "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "deleteExtensionViewHandler": [Function],
-              "extensionViews": undefined,
-              "isDisplayed": true,
-              "isLocal": undefined,
-              "manifest": undefined,
-              "openEditViewHandler": [Function],
-              "openExtensionViewHandler": [Function],
-              "secret": undefined,
+              "closeHandler": [Function],
+              "mustSave": true,
+              "saveHandler": [Function],
+              "userId": undefined,
             },
             "ref": null,
             "rendered": null,
             "type": [Function],
           },
-          false,
           false,
           false,
         ],
@@ -146,29 +126,20 @@ ShallowWrapper {
         "children": Array [
           <Connect(RigNavComponent)
             createNewProject={[Function]}
-            currentProjectIndex={0}
+            currentProjectIndex={-1}
             error={undefined}
-            manifest={undefined}
-            projects={
-                        Array [
-                                    Object {},
-                                    Object {},
-                                  ]
-            }
+            manifest={null}
+            projects={Array []}
             selectProject={[Function]}
-            selectedView={0}
+            selectedView={2}
             viewerHandler={[Function]}
 />,
           <Unknown>
-            <ExtensionViewContainer
-                        deleteExtensionViewHandler={[Function]}
-                        extensionViews={undefined}
-                        isDisplayed={true}
-                        isLocal={undefined}
-                        manifest={undefined}
-                        openEditViewHandler={[Function]}
-                        openExtensionViewHandler={[Function]}
-                        secret={undefined}
+            <CreateProjectDialog
+                        closeHandler={[Function]}
+                        mustSave={true}
+                        saveHandler={[Function]}
+                        userId={undefined}
             />
 </Unknown>,
         ],
@@ -182,15 +153,12 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "createNewProject": [Function],
-            "currentProjectIndex": 0,
+            "currentProjectIndex": -1,
             "error": undefined,
-            "manifest": undefined,
-            "projects": Array [
-              Object {},
-              Object {},
-            ],
+            "manifest": null,
+            "projects": Array [],
             "selectProject": [Function],
-            "selectedView": 0,
+            "selectedView": 2,
             "viewerHandler": [Function],
           },
           "ref": null,
@@ -204,18 +172,14 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               false,
-              false,
-              <ExtensionViewContainer
-                deleteExtensionViewHandler={[Function]}
-                extensionViews={undefined}
-                isDisplayed={true}
-                isLocal={undefined}
-                manifest={undefined}
-                openEditViewHandler={[Function]}
-                openExtensionViewHandler={[Function]}
-                secret={undefined}
+              undefined,
+              undefined,
+              <CreateProjectDialog
+                closeHandler={[Function]}
+                mustSave={true}
+                saveHandler={[Function]}
+                userId={undefined}
 />,
-              false,
               false,
               false,
             ],
@@ -223,26 +187,22 @@ ShallowWrapper {
           "ref": null,
           "rendered": Array [
             false,
-            false,
+            undefined,
+            undefined,
             Object {
               "instance": null,
-              "key": "ExtensionViewContainer0",
+              "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "deleteExtensionViewHandler": [Function],
-                "extensionViews": undefined,
-                "isDisplayed": true,
-                "isLocal": undefined,
-                "manifest": undefined,
-                "openEditViewHandler": [Function],
-                "openExtensionViewHandler": [Function],
-                "secret": undefined,
+                "closeHandler": [Function],
+                "mustSave": true,
+                "saveHandler": [Function],
+                "userId": undefined,
               },
               "ref": null,
               "rendered": null,
               "type": [Function],
             },
-            false,
             false,
             false,
           ],
@@ -296,7 +256,7 @@ ShallowWrapper {
           createNewProject={[Function]}
           currentProjectIndex={0}
           error={undefined}
-          manifest={undefined}
+          manifest={Object {}}
           projects={
                     Array [
                               Object {
@@ -319,6 +279,7 @@ ShallowWrapper {
                                     "y": 0,
                                   },
                                 ],
+                                "manifest": Object {},
                               },
                             ]
           }
@@ -352,7 +313,7 @@ ShallowWrapper {
                     }
                     isDisplayed={true}
                     isLocal={undefined}
-                    manifest={undefined}
+                    manifest={Object {}}
                     openEditViewHandler={[Function]}
                     openExtensionViewHandler={[Function]}
                     secret={undefined}
@@ -371,7 +332,7 @@ ShallowWrapper {
           "createNewProject": [Function],
           "currentProjectIndex": 0,
           "error": undefined,
-          "manifest": undefined,
+          "manifest": Object {},
           "projects": Array [
             Object {
               "extensionViews": Array [
@@ -393,6 +354,7 @@ ShallowWrapper {
                   "y": 0,
                 },
               ],
+              "manifest": Object {},
             },
           ],
           "selectProject": [Function],
@@ -436,7 +398,7 @@ ShallowWrapper {
               }
               isDisplayed={true}
               isLocal={undefined}
-              manifest={undefined}
+              manifest={Object {}}
               openEditViewHandler={[Function]}
               openExtensionViewHandler={[Function]}
               secret={undefined}
@@ -477,7 +439,7 @@ ShallowWrapper {
               ],
               "isDisplayed": true,
               "isLocal": undefined,
-              "manifest": undefined,
+              "manifest": Object {},
               "openEditViewHandler": [Function],
               "openExtensionViewHandler": [Function],
               "secret": undefined,
@@ -506,7 +468,7 @@ ShallowWrapper {
             createNewProject={[Function]}
             currentProjectIndex={0}
             error={undefined}
-            manifest={undefined}
+            manifest={Object {}}
             projects={
                         Array [
                                     Object {
@@ -529,6 +491,7 @@ ShallowWrapper {
                                           "y": 0,
                                         },
                                       ],
+                                      "manifest": Object {},
                                     },
                                   ]
             }
@@ -562,7 +525,7 @@ ShallowWrapper {
                         }
                         isDisplayed={true}
                         isLocal={undefined}
-                        manifest={undefined}
+                        manifest={Object {}}
                         openEditViewHandler={[Function]}
                         openExtensionViewHandler={[Function]}
                         secret={undefined}
@@ -581,7 +544,7 @@ ShallowWrapper {
             "createNewProject": [Function],
             "currentProjectIndex": 0,
             "error": undefined,
-            "manifest": undefined,
+            "manifest": Object {},
             "projects": Array [
               Object {
                 "extensionViews": Array [
@@ -603,6 +566,7 @@ ShallowWrapper {
                     "y": 0,
                   },
                 ],
+                "manifest": Object {},
               },
             ],
             "selectProject": [Function],
@@ -646,7 +610,7 @@ ShallowWrapper {
                 }
                 isDisplayed={true}
                 isLocal={undefined}
-                manifest={undefined}
+                manifest={Object {}}
                 openEditViewHandler={[Function]}
                 openExtensionViewHandler={[Function]}
                 secret={undefined}
@@ -687,7 +651,7 @@ ShallowWrapper {
                 ],
                 "isDisplayed": true,
                 "isLocal": undefined,
-                "manifest": undefined,
+                "manifest": Object {},
                 "openEditViewHandler": [Function],
                 "openExtensionViewHandler": [Function],
                 "secret": undefined,

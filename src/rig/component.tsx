@@ -62,8 +62,7 @@ export class RigComponent extends React.Component<Props, State> {
 
   constructor(props: Props) {
     super(props);
-    this.setLogin();
-    this.loadProjects();
+    this.setLogin().then(this.loadProjects);
   }
 
   public openEditViewHandler = (id: string) => {
@@ -274,14 +273,14 @@ export class RigComponent extends React.Component<Props, State> {
     this.updateProject({ extensionViews } as RigProject);
   }
 
-  private async loadProjects() {
+  private loadProjects = async () => {
     const projectsValue = localStorage.getItem('projects');
     if (projectsValue) {
       const projects = JSON.parse(projectsValue) as RigProject[];
       const currentProject = projects[Number(localStorage.getItem('currentProjectIndex') || 0)];
       const selectedView = currentProject.backendCommand || currentProject.frontendCommand || currentProject.frontendFolderName ?
         NavItem.ProjectOverview : NavItem.ExtensionViews;
-      Object.assign(this.state, { currentProject, projects, selectedView });
+      this.setState({ currentProject, projects, selectedView });
     } else if (process.env.EXT_CLIENT_ID && process.env.EXT_SECRET && process.env.EXT_VERSION) {
       const serializedExtensionViews = localStorage.getItem('extensionViews');
       const currentProject: RigProject = {
@@ -295,7 +294,7 @@ export class RigComponent extends React.Component<Props, State> {
         backendCommand: '',
       };
       const projects = [currentProject];
-      Object.assign(this.state, { currentProject, projects });
+      this.setState({ currentProject, projects });
       localStorage.setItem('projects', JSON.stringify(projects));
       localStorage.setItem('currentProjectIndex', '0');
       const { isLocal, secret, manifest: { id: clientId, version } } = currentProject;

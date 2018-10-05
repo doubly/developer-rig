@@ -3,7 +3,7 @@ import { ExtensionState, ExtensionViewType } from '../constants/extension-coordi
 import { generateId } from './generate-id';
 import { toSnakeCase } from './case';
 
-export function generateManifest(baseUri: string, ownerName: string, name: string, types: string[]): ExtensionManifest {
+export function generateManifest(baseUri: string, ownerName: string, name: string, types: ExtensionViewType[]): ExtensionManifest {
   return {
     authorName: ownerName,
     bitsEnabled: false,

@@ -1,5 +1,6 @@
 import { setupShallowTest } from '../tests/enzyme-util/shallow';
 import { CreateProjectDialog } from './component';
+import { ExtensionViewType } from '../constants/extension-coordinator';
 import { generateManifest } from '../util/generate-manifest';
 
 Math.random = () => .25;
@@ -76,7 +77,7 @@ describe('<CreateProjectDialog />', () => {
           frontendCommand: '',
           frontendFolderName: '',
           isLocal: true,
-          manifest: generateManifest('https://localhost.rig.twitch.tv:8080', login, value, ['panel']),
+          manifest: generateManifest('https://localhost.rig.twitch.tv:8080', login, value, [ExtensionViewType.Panel]),
           projectFolderPath: value,
           secret: 'test',
         });

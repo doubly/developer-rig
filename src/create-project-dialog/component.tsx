@@ -151,8 +151,8 @@ export class CreateProjectDialog extends React.Component<Props, State>{
     return true;
   }
 
-  private getTypes(): string[] {
-    const types: string[] = [];
+  private getTypes(): ExtensionViewType[] {
+    const types: ExtensionViewType[] = [];
     this.state.extensionTypes & ExtensionTypes.Component && types.push(ExtensionViewType.Component);
     this.state.extensionTypes & ExtensionTypes.Mobile && types.push(ExtensionViewType.Mobile);
     this.state.extensionTypes & ExtensionTypes.Overlay && types.push(ExtensionViewType.Overlay);

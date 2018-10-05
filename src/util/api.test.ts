@@ -1,9 +1,12 @@
 import { Product } from '../core/models/product';
 import {
+  createProject,
+  fetchExamples,
   fetchExtensionManifest,
   fetchUser,
   fetchProducts,
   fetchNewRelease,
+  hostFrontend,
   saveProduct,
   startFrontend,
   startBackend,
@@ -43,6 +46,22 @@ describe('api', () => {
       } catch (ex) {
         expect(ex.message).toEqual('500 error');
       }
+    });
+  });
+
+  describe('createProject', () => {
+    it('succeeds', async function() {
+      globalAny.fetch = jest.fn().mockImplementation(mockEmptyResponse);
+      await createProject('projectFolderPath', 'codeGenerationOption', 0);
+      expect(globalAny.fetch).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('fetchExamples', () => {
+    it('succeeds', async function() {
+      globalAny.fetch = jest.fn().mockImplementation(mockEmptyResponse);
+      await fetchExamples();
+      expect(globalAny.fetch).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -158,6 +177,14 @@ describe('api', () => {
       fetchNewRelease().catch((error) => {
         expect(error).toEqual('Fake error');
       });
+    });
+  });
+
+  describe('hostFrontend', () => {
+    it('succeeds', async function() {
+      globalAny.fetch = jest.fn().mockImplementation(mockEmptyResponse);
+      await hostFrontend('frontendFolderPath', false, 8080, 'projectFolderPath');
+      expect(globalAny.fetch).toHaveBeenCalledTimes(1);
     });
   });
 

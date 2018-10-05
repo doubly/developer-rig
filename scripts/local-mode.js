@@ -31,7 +31,7 @@ module.exports = function(app, extension) {
     res.end(JSON.stringify(data));
   });
 
-  app.post('/extensions/search', (req, res) => {
+  app.get('/extensions/:clientId/:version', (req, res) => {
     checkClientId(req.header('Client-ID'));
     checkToken(req.header('Authorization'));
     res.setHeader('Content-Type', 'application/json');

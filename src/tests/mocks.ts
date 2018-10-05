@@ -25,7 +25,7 @@ export function mockFetchForUserInfo() {
 }
 
 export function mockEmptyResponse() {
-  return Promise.resolve({ json: () => ({}) });
+  return Promise.resolve({ json: () => '' });
 }
 
 export function mockFetch400() {

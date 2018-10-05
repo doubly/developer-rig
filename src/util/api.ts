@@ -113,21 +113,13 @@ export async function fetchExamples(): Promise<Example[]> {
 }
 
 export async function fetchExtensionManifest(isLocal: boolean, id: string, version: string, jwt: string): Promise<ExtensionManifest> {
-  const search = {
-    limit: 1,
-    searches: [
-      { field: 'id', term: id },
-      { field: 'version', term: version },
-    ],
-  };
   const api = new Api({ isLocal });
-  const response = await api.post<{ extensions: any[] }>('/extensions/search', search, `Unable to authorize for client id ${id}`, {
+  const response = await api.get<{ extensions: any[] }>(`/extensions/${id}/${version}`, `Unable to authorize for client id ${id}`, {
     Authorization: `Bearer ${jwt}`,
     'Client-ID': id,
   });
-  const { extensions } = response;
-  if (extensions && extensions.length) {
-    const manifest = toCamelCase(extensions[0]) as ExtensionManifest;
+  if (response) {
+    const manifest = toCamelCase(response) as ExtensionManifest;
     return manifest;
   }
   throw new Error('Unable to retrieve extension manifest; please verify your client ID, secret, and version');

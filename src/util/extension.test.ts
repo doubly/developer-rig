@@ -59,7 +59,7 @@ describe('extension', () => {
   it("fetches a user's extension with the correct data", async () => {
     const globalAny = global as any;
     const expected = { id: 'test' };
-    globalAny.fetch = jest.fn().mockImplementation(() => Promise.resolve({ status: 200, json: () => Promise.resolve({ extensions: [expected]}) }));
+    globalAny.fetch = jest.fn().mockImplementation(() => Promise.resolve({ status: 200, json: () => Promise.resolve(expected) }));
     const actual = await fetchUserExtensionManifest(true, 'userId', 'secret', 'clientId', 'version');
     expect(actual).toEqual(expected);
   });

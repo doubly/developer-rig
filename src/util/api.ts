@@ -140,14 +140,18 @@ interface UsersResponse {
   }[];
 }
 
-export async function fetchUser(token: string) {
-  const path = '/helix/users';
+export async function fetchUser(token: string, login?: string) {
+  const path = `/helix/users${login ? `?login=${login}` : ''}`;
   const response = await onlineApi.get<UsersResponse>(path, `Cannot authorize to get user data with access token ${token}`, {
     Authorization: `Bearer ${token}`,
   });
   const { data } = response;
   if (data && data.length) {
     return data[0];
+  }
+  if (login) {
+    // Did not find that user.
+    return null;
   }
   throw new Error(`Invalid server response for access token ${token}`);
 }

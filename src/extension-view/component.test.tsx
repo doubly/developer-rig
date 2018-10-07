@@ -71,6 +71,34 @@ describe('<ExtensionView />', () => {
       });
       expect(wrapper).toMatchSnapshot();
     });
+
+    it('sets correct live config height when panel height provided', () => {
+      const extensionWithPanelHeight: ExtensionCoordinator.ExtensionObject = {
+        ...createExtensionForTest(),
+        views: {
+          config: {
+            canLinkExternalContent: false,
+            viewerUrl: "test",
+          },
+          liveConfig: {
+            canLinkExternalContent: false,
+            viewerUrl: "test",
+          },
+          panel: {
+            canLinkExternalContent: false,
+            viewerUrl: 'test',
+            height: 500,
+          }
+        },
+      };
+
+      const { wrapper } = setupShallow({
+        type: ExtensionMode.Dashboard,
+        extension: extensionWithPanelHeight
+      });
+
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 
   describe('mobile mode views', () => {
@@ -125,7 +153,7 @@ describe('<ExtensionView />', () => {
           panel: {
             canLinkExternalContent: false,
             viewerUrl: 'test',
-            height: 300,
+            height: 400,
           }
         },
       };

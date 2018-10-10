@@ -77,7 +77,7 @@ describe('<RigNavComponent />', () => {
     const { wrapper } = setupShallow({
       session: undefined,
     });
-    expect(wrapper.find('.top-nav-item__disabled')).toHaveLength(1);
+    expect(wrapper.find('.top-nav-item__disabled')).toHaveLength(2);
   });
 
   it('disables product management tab when extension is not bits enabled', () => {
@@ -87,6 +87,6 @@ describe('<RigNavComponent />', () => {
         bitsEnabled: false,
       },
     });
-    expect(wrapper.find('.top-nav-item__disabled')).toHaveLength(1);
+    expect(wrapper.find('.top-nav-item__disabled')).toHaveLength(2);
   });
 });

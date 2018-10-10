@@ -7,6 +7,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <ExtensionMobileView
     bindIframeToParent={[Function]}
     channelId="twitch"
+    configuration={Object {}}
     extension={
         Object {
             "authorName": "test",
@@ -112,6 +113,7 @@ ShallowWrapper {
                 bindIframeToParent={[Function]}
                 channelId="twitch"
                 className="view"
+                configuration={Object {}}
                 extension={
                         Object {
                                 "authorName": "test",
@@ -198,6 +200,7 @@ ShallowWrapper {
           bindIframeToParent={[Function]}
           channelId="twitch"
           className="view"
+          configuration={Object {}}
           extension={
                     Object {
                               "authorName": "test",
@@ -282,6 +285,7 @@ ShallowWrapper {
           "bindIframeToParent": [Function],
           "channelId": "twitch",
           "className": "view",
+          "configuration": Object {},
           "extension": Object {
             "authorName": "test",
             "bitsEnabled": false,
@@ -374,6 +378,7 @@ ShallowWrapper {
                     bindIframeToParent={[Function]}
                     channelId="twitch"
                     className="view"
+                    configuration={Object {}}
                     extension={
                               Object {
                                         "authorName": "test",
@@ -460,6 +465,7 @@ ShallowWrapper {
             bindIframeToParent={[Function]}
             channelId="twitch"
             className="view"
+            configuration={Object {}}
             extension={
                         Object {
                                     "authorName": "test",
@@ -544,6 +550,7 @@ ShallowWrapper {
             "bindIframeToParent": [Function],
             "channelId": "twitch",
             "className": "view",
+            "configuration": Object {},
             "extension": Object {
               "authorName": "test",
               "bitsEnabled": false,

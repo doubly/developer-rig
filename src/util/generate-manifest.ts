@@ -7,6 +7,7 @@ export function generateManifest(baseUri: string, ownerName: string, name: strin
   return {
     authorName: ownerName,
     bitsEnabled: false,
+    configurationLocation: 'custom',
     description: 'This is a local-mode extension project, ' + name,
     hasChatSupport: false,
     iconUrls: { "100x100": "https://media.forgecdn.net/avatars/158/128/636650453584584748.png" },

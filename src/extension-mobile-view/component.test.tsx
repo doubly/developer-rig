@@ -6,6 +6,7 @@ import { ExtensionMode } from '../constants/extension-coordinator';
 
 const setupShallow = setupShallowTest(ExtensionMobileView, () => ({
   channelId: 'twitch',
+  configuration: {},
   id: '0',
   extension: createExtensionForTest(),
   orientation: MobileOrientation.Portrait,

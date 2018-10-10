@@ -32,6 +32,28 @@ module.exports = function(app) {
       sslFolderName: 'conf',
       expectedDuration: 'a minute',
     },
+    {
+      title: 'Bot Commander',
+      description: 'Front-end-only React-based example that leverages Configuration Service.',
+      repository: 'twitchdev/bot-commander',
+      frontendFolderName: 'bot-commander',
+      frontendCommand: 'npm run host',
+      backendCommand: '',
+      npm: ['i'],
+      sslFolderName: 'conf',
+      expectedDuration: 'a minute',
+    },
+    {
+      title: 'Animal Facts (requires Go 1.10+)',
+      description: 'Example with React-based front-end and back-end service that leverages Configuration Service.',
+      repository: 'twitchdev/animal-facts',
+      frontendFolderName: 'animal-facts',
+      frontendCommand: 'npm run host',
+      backendCommand: '',
+      npm: ['i'],
+      sslFolderName: 'conf',
+      expectedDuration: 'a minute',
+    },
   ];
 
   app.get('/examples', (_, res) => {

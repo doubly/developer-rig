@@ -8,6 +8,7 @@ ShallowWrapper {
     bindIframeToParent={[Function]}
     channelId="twitch"
     className="view"
+    configuration={Object {}}
     extension={
         Object {
             "authorName": "test",
@@ -132,6 +133,7 @@ ShallowWrapper {
     bindIframeToParent={[Function]}
     channelId="twitch"
     className="view"
+    configuration={Object {}}
     extension={
         Object {
             "authorName": "test",
@@ -256,6 +258,7 @@ ShallowWrapper {
     bindIframeToParent={[Function]}
     channelId="twitch"
     className="view"
+    configuration={Object {}}
     extension={
         Object {
             "authorName": "test",
@@ -380,6 +383,7 @@ ShallowWrapper {
     bindIframeToParent={[Function]}
     channelId="twitch"
     className="view"
+    configuration={Object {}}
     extension={
         Object {
             "authorName": "test",
@@ -504,6 +508,7 @@ ShallowWrapper {
     bindIframeToParent={[Function]}
     channelId="twitch"
     className="view"
+    configuration={Object {}}
     extension={
         Object {
             "authorName": "test",
@@ -628,6 +633,7 @@ ShallowWrapper {
     bindIframeToParent={[Function]}
     channelId="twitch"
     className="view"
+    configuration={Object {}}
     extension={
         Object {
             "authorName": "test",

@@ -9,6 +9,7 @@ describe('extension', () => {
   const manifest: ExtensionManifest = {
     authorName: 'test',
     bitsEnabled: true,
+    configurationLocation: 'custom',
     description: 'test',
     hasChatSupport: false,
     iconUrls: {

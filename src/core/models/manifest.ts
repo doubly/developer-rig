@@ -3,6 +3,7 @@ import { ExtensionAnchor, ExtensionPlatform } from '../../constants/extension-co
 export interface ExtensionManifest {
   authorName: string;
   bitsEnabled: boolean;
+  configurationLocation: string;
   description: string;
   hasChatSupport: boolean;
   iconUrls: {

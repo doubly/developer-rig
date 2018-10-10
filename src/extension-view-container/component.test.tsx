@@ -1,11 +1,21 @@
 import { setupShallowTest } from '../tests/enzyme-util/shallow';
+import { ChannelSegments } from '../core/models/rig';
 import { createExtensionForTest, createViewsForTest, createExtensionManifestForTest } from '../tests/constants/extension';
 import { ExtensionViewContainer } from './component';
 import { ExtensionAnchors } from '../constants/extension-types';
 import { ViewerTypes } from '../constants/viewer-types';
 import { ExtensionMode, ExtensionAnchor } from '../constants/extension-coordinator';
 
+const segment = {
+  content: 'content',
+  version: 'version',
+};
+
 const setupShallow = setupShallowTest(ExtensionViewContainer, () => ({
+  configurations: {
+    globalSegment: segment,
+    channelSegments: {} as ChannelSegments,
+  },
   manifest: createExtensionManifestForTest(),
   secret: '',
   mode: ExtensionMode.Viewer,

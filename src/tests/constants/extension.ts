@@ -5,6 +5,7 @@ import { RigExtensionView } from '../../core/models/rig';
 export const createExtensionManifestForTest = (): ExtensionManifest => ({
   authorName: 'test',
   bitsEnabled: true,
+  configurationLocation: 'custom',
   description: 'test',
   hasChatSupport: false,
   iconUrls: {

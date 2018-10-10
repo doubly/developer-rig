@@ -17,6 +17,7 @@ ShallowWrapper {
             "manifest": Object {
               "authorName": "test",
               "bitsEnabled": true,
+              "configurationLocation": "custom",
               "description": "test",
               "hasChatSupport": false,
               "iconUrls": Object {

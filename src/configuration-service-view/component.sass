@@ -1,0 +1,52 @@
+.configuration-service-view
+  display: grid
+  grid-template-columns: 1fr 8pt 1fr
+  grid-gap: 8pt
+  margin-top: 8pt
+
+  &__button
+    background-color: #6441A4
+    border: 0
+    color: white
+    height: 15pt
+    margin-left: 8pt
+    min-width: 8em
+
+    &--first
+      margin-left: 0
+
+  &__title
+    font-size: larger
+    font-weight: bold
+
+  &-property
+    display: block
+    margin: 1em
+
+    &__input
+      width: 70%
+
+      &--error
+        border-color: red
+
+    &__name
+      margin-bottom: 4pt
+
+    &__value
+      color: grey
+      user-select: text
+
+  &__vertical-bar
+    background-color: #DAD8DE
+    width: 1pt;
+    height: 100%
+
+  &__item
+    margin-bottom: 8pt
+    margin-left: -17pt
+
+  &__item-text
+    margin: 3pt
+
+    &--title
+      font-weight: bold

@@ -10,6 +10,7 @@ const DeleteButtonSelector = '.view__close_button.visible';
 describe('<ExtensionView />', () => {
   const setupShallow = setupShallowTest(ExtensionView, () => ({
     channelId: 'twitch',
+    configuration: {},
     id: '0',
     extension: createExtensionForTest(),
     type: ExtensionAnchor.Panel,

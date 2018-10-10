@@ -9,6 +9,7 @@ describe('generateManifest', () => {
     const expected = {
       authorName: "ownerName",
       bitsEnabled: false,
+      configurationLocation: "custom",
       description: "This is a local-mode extension project, name",
       hasChatSupport: false,
       iconUrls: {

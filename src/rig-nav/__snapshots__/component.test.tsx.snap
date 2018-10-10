@@ -14,6 +14,7 @@ ShallowWrapper {
         Object {
             "authorName": "test",
             "bitsEnabled": true,
+            "configurationLocation": "custom",
             "description": "test",
             "hasChatSupport": false,
             "iconUrls": Object {
@@ -137,6 +138,12 @@ ShallowWrapper {
                     onClick={[Function]}
           >
                     Manage Bits Products
+          </a>
+          <a
+                    className="offset top-nav-item top-nav-item__disabled"
+                    onClick={[Function]}
+          >
+                    Configuration Service
           </a>
 </div>,
       ],
@@ -286,6 +293,12 @@ ShallowWrapper {
 >
               Manage Bits Products
 </a>,
+            <a
+              className="offset top-nav-item top-nav-item__disabled"
+              onClick={[Function]}
+>
+              Configuration Service
+</a>,
           ],
           "className": "top-nav__item-container",
         },
@@ -328,6 +341,19 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": "Manage Bits Products",
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Configuration Service",
+              "className": "offset top-nav-item top-nav-item__disabled",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Configuration Service",
             "type": "a",
           },
         ],
@@ -395,6 +421,12 @@ ShallowWrapper {
                         onClick={[Function]}
             >
                         Manage Bits Products
+            </a>
+            <a
+                        className="offset top-nav-item top-nav-item__disabled"
+                        onClick={[Function]}
+            >
+                        Configuration Service
             </a>
 </div>,
         ],
@@ -544,6 +576,12 @@ ShallowWrapper {
 >
                 Manage Bits Products
 </a>,
+              <a
+                className="offset top-nav-item top-nav-item__disabled"
+                onClick={[Function]}
+>
+                Configuration Service
+</a>,
             ],
             "className": "top-nav__item-container",
           },
@@ -586,6 +624,19 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": "Manage Bits Products",
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Configuration Service",
+                "className": "offset top-nav-item top-nav-item__disabled",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Configuration Service",
               "type": "a",
             },
           ],

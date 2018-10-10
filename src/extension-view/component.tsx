@@ -31,6 +31,7 @@ export const PanelViewDimensions = Object.freeze({
 interface Props {
   id: string;
   channelId: string;
+  configuration: ExtensionCoordinator.Configuration;
   extension: ExtensionCoordinator.ExtensionObject;
   installationAbilities: ExtensionCoordinator.ExtensionInstallationAbilities;
   type: string;
@@ -103,9 +104,11 @@ export class ExtensionView extends React.Component<Props, State> {
       case ExtensionAnchor.Component:
         view = (
           <ExtensionComponentView
+            key={`ExtensionComponentView${JSON.stringify(this.props.configuration)}`}
             bindIframeToParent={this.bindIframeToParent}
             channelId={this.props.channelId}
             className="view"
+            configuration={this.props.configuration}
             extension={this.props.extension}
             frameSize={this.props.frameSize}
             id={`component-${this.props.id}`}
@@ -118,9 +121,11 @@ export class ExtensionView extends React.Component<Props, State> {
       case ExtensionViewType.Mobile:
         view = (
           <ExtensionMobileView
+            key={`ExtensionMobileView${JSON.stringify(this.props.configuration)}`}
             bindIframeToParent={this.bindIframeToParent}
             channelId={this.props.channelId}
             className="view"
+            configuration={this.props.configuration}
             extension={this.props.extension}
             frameSize={this.props.frameSize}
             id={`mobile-${this.props.id}`}
@@ -135,9 +140,11 @@ export class ExtensionView extends React.Component<Props, State> {
         view = (
           <div className="view nono_zone" style={extensionProps.viewStyles}>
             <ExtensionFrame
+              key={`ExtensionFrame${JSON.stringify(this.props.configuration)}`}
               bindIframeToParent={this.bindIframeToParent}
               channelId={this.props.channelId}
               className="view"
+              configuration={this.props.configuration}
               extension={this.props.extension}
               frameId={`frameid-${this.props.id}`}
               installationAbilities={this.props.installationAbilities}
@@ -153,9 +160,11 @@ export class ExtensionView extends React.Component<Props, State> {
         view = (
           <div className="view" style={extensionProps.viewStyles}>
             <ExtensionFrame
+              key={`ExtensionFrame${JSON.stringify(this.props.configuration)}`}
               bindIframeToParent={this.bindIframeToParent}
               channelId={this.props.channelId}
               className="view"
+              configuration={this.props.configuration}
               extension={this.props.extension}
               frameId={`frameid-${this.props.id}`}
               installationAbilities={this.props.installationAbilities}

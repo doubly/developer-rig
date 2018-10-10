@@ -5,6 +5,15 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionViewContainer
+    configurations={
+        Object {
+            "channelSegments": Object {},
+            "globalSegment": Object {
+              "content": "content",
+              "version": "version",
+            },
+          }
+    }
     deleteExtensionViewHandler={[Function]}
     extension={
         Object {
@@ -71,6 +80,7 @@ ShallowWrapper {
         Object {
             "authorName": "test",
             "bitsEnabled": true,
+            "configurationLocation": "custom",
             "description": "test",
             "hasChatSupport": false,
             "iconUrls": Object {

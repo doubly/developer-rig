@@ -1,20 +1,21 @@
 import { RigRole } from '../constants/rig';
 import { sign } from 'jsonwebtoken';
 
-const OneYearMS: number = 365 * 24 * 60 * 60 * 1000;
+const OneDayMS: number = 24 * 60 * 60 * 1000;
+const OneYearMS: number = 365 * OneDayMS;
 
 interface PubsubPerms {
-  listen?: string[];
+  listen: string[];
   send?: string[];
 }
 
 export interface TokenPayload {
   exp: number;
   user_id?: string;
-  opaque_user_id: string;
+  opaque_user_id?: string;
   channel_id?: string;
   role: string;
-  pubsub_perms: PubsubPerms;
+  pubsub_perms?: PubsubPerms;
 }
 
 export interface TokenSpec {
@@ -38,7 +39,7 @@ export function createSignedToken(tokenSpec: TokenSpec): string {
   }
 
   const payload: TokenPayload = {
-    exp: Math.floor(((Date.now() + OneYearMS) / 1000)),
+    exp: Math.floor((Date.now() + OneYearMS) / 1000),
     opaque_user_id: opaqueUserId || '',
     role,
     pubsub_perms,
@@ -50,5 +51,14 @@ export function createSignedToken(tokenSpec: TokenSpec): string {
     payload.user_id = userId;
   }
 
+  return sign(payload, new Buffer(secret, 'base64'), { algorithm: 'HS256' });
+}
+
+export function createConfigurationToken(secret: string, userId: string): string {
+  const payload: TokenPayload = {
+    exp: Math.floor((Date.now() + OneDayMS) / 1000),
+    role: 'external',
+    user_id: userId,
+  };
   return sign(payload, new Buffer(secret, 'base64'), { algorithm: 'HS256' });
 }

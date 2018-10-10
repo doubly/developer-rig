@@ -1,6 +1,7 @@
 import { Product, DeserializedProduct } from '../core/models/product';
 import { ExtensionManifest } from '../core/models/manifest';
 import { toCamelCase } from '../util/case';
+import { createConfigurationToken } from './token';
 
 const API_HOST = process.env.API_HOST || 'api.twitch.tv';
 
@@ -139,14 +140,18 @@ interface UsersResponse {
   }[];
 }
 
-export async function fetchUser(token: string) {
-  const path = '/helix/users';
+export async function fetchUser(token: string, login?: string) {
+  const path = `/helix/users${login ? `?login=${login}` : ''}`;
   const response = await onlineApi.get<UsersResponse>(path, `Cannot authorize to get user data with access token ${token}`, {
     Authorization: `Bearer ${token}`,
   });
   const { data } = response;
   if (data && data.length) {
     return data[0];
+  }
+  if (login) {
+    // Did not find that user.
+    return null;
   }
   throw new Error(`Invalid server response for access token ${token}`);
 }
@@ -210,4 +215,45 @@ export async function fetchNewRelease() {
     };
   }
   throw new Error('Cannot get GitHub developer rig latest release');
+}
+
+interface SegmentRecordMap {
+  [key: string]: {
+    record: ExtensionCoordinator.Segment;
+  }
+}
+
+export async function fetchGlobalConfigurationSegment(clientId: string, userId: string, secret: string): Promise<ExtensionCoordinator.Segment> {
+  const path = `/extensions/${clientId}/configurations/segments/global`;
+  const headers = {
+    Authorization: `Bearer ${createConfigurationToken(secret, userId)}`,
+    'Client-ID': clientId,
+  };
+  const segmentMap = await onlineApi.get<SegmentRecordMap>(path, 'Cannot authorize for global configuration', headers);
+  const global = segmentMap['global:'];
+  return global ? global.record : { content: '', version: '' };
+}
+
+export interface SegmentMap {
+  broadcaster?: ExtensionCoordinator.Segment;
+  developer?: ExtensionCoordinator.Segment;
+}
+
+export async function fetchChannelConfigurationSegments(clientId: string, userId: string, channelId: string, secret: string): Promise<SegmentMap> {
+  const path = `/extensions/${clientId}/configurations/channels/${channelId}`;
+  const headers = {
+    Authorization: `Bearer ${createConfigurationToken(secret, userId)}`,
+    'Client-ID': clientId,
+  };
+  const segmentMap = await onlineApi.get<SegmentRecordMap>(path, 'Cannot authorize for channel configurations', headers);
+  const broadcaster = segmentMap[`broadcaster:${channelId}`];
+  const developer = segmentMap[`developer:${channelId}`];
+  const segments = {} as SegmentMap;
+  if (broadcaster) {
+    segments.broadcaster = broadcaster.record;
+  }
+  if (developer) {
+    segments.developer = developer.record;
+  }
+  return segments;
 }

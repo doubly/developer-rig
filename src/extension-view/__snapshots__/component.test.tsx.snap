@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionView
     channelId="twitch"
+    configuration={Object {}}
     deleteViewHandler={[Function]}
     extension={
         Object {
@@ -139,6 +140,7 @@ ShallowWrapper {
           bindIframeToParent={[Function]}
           channelId="twitch"
           className="view"
+          configuration={Object {}}
           extension={
                     Object {
                               "authorName": "test",
@@ -356,12 +358,13 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "ExtensionComponentView{}",
         "nodeType": "class",
         "props": Object {
           "bindIframeToParent": [Function],
           "channelId": "twitch",
           "className": "view",
+          "configuration": Object {},
           "extension": Object {
             "authorName": "test",
             "bitsEnabled": false,
@@ -479,6 +482,7 @@ ShallowWrapper {
             bindIframeToParent={[Function]}
             channelId="twitch"
             className="view"
+            configuration={Object {}}
             extension={
                         Object {
                                     "authorName": "test",
@@ -696,12 +700,13 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "ExtensionComponentView{}",
           "nodeType": "class",
           "props": Object {
             "bindIframeToParent": [Function],
             "channelId": "twitch",
             "className": "view",
+            "configuration": Object {},
             "extension": Object {
               "authorName": "test",
               "bitsEnabled": false,
@@ -796,6 +801,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionView
     channelId="twitch"
+    configuration={Object {}}
     deleteViewHandler={[Function]}
     extension={
         Object {
@@ -932,6 +938,7 @@ ShallowWrapper {
                     bindIframeToParent={[Function]}
                     channelId="twitch"
                     className="view"
+                    configuration={Object {}}
                     extension={
                               Object {
                                         "authorName": "test",
@@ -1127,6 +1134,7 @@ ShallowWrapper {
             bindIframeToParent={[Function]}
             channelId="twitch"
             className="view"
+            configuration={Object {}}
             extension={
                         Object {
                                     "authorName": "test",
@@ -1204,12 +1212,13 @@ ShallowWrapper {
         "ref": null,
         "rendered": Object {
           "instance": null,
-          "key": undefined,
+          "key": "ExtensionFrame{}",
           "nodeType": "class",
           "props": Object {
             "bindIframeToParent": [Function],
             "channelId": "twitch",
             "className": "view",
+            "configuration": Object {},
             "extension": Object {
               "authorName": "test",
               "bitsEnabled": false,
@@ -1326,6 +1335,7 @@ ShallowWrapper {
                         bindIframeToParent={[Function]}
                         channelId="twitch"
                         className="view"
+                        configuration={Object {}}
                         extension={
                                     Object {
                                                 "authorName": "test",
@@ -1521,6 +1531,7 @@ ShallowWrapper {
               bindIframeToParent={[Function]}
               channelId="twitch"
               className="view"
+              configuration={Object {}}
               extension={
                             Object {
                                           "authorName": "test",
@@ -1598,12 +1609,13 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": undefined,
+            "key": "ExtensionFrame{}",
             "nodeType": "class",
             "props": Object {
               "bindIframeToParent": [Function],
               "channelId": "twitch",
               "className": "view",
+              "configuration": Object {},
               "extension": Object {
                 "authorName": "test",
                 "bitsEnabled": false,
@@ -1694,6 +1706,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionView
     channelId="twitch"
+    configuration={Object {}}
     deleteViewHandler={[Function]}
     extension={
         Object {
@@ -1830,6 +1843,7 @@ ShallowWrapper {
                     bindIframeToParent={[Function]}
                     channelId="twitch"
                     className="view"
+                    configuration={Object {}}
                     extension={
                               Object {
                                         "authorName": "test",
@@ -2022,6 +2036,7 @@ ShallowWrapper {
             bindIframeToParent={[Function]}
             channelId="twitch"
             className="view"
+            configuration={Object {}}
             extension={
                         Object {
                                     "authorName": "test",
@@ -2099,12 +2114,13 @@ ShallowWrapper {
         "ref": null,
         "rendered": Object {
           "instance": null,
-          "key": undefined,
+          "key": "ExtensionFrame{}",
           "nodeType": "class",
           "props": Object {
             "bindIframeToParent": [Function],
             "channelId": "twitch",
             "className": "view",
+            "configuration": Object {},
             "extension": Object {
               "authorName": "test",
               "bitsEnabled": false,
@@ -2221,6 +2237,7 @@ ShallowWrapper {
                         bindIframeToParent={[Function]}
                         channelId="twitch"
                         className="view"
+                        configuration={Object {}}
                         extension={
                                     Object {
                                                 "authorName": "test",
@@ -2413,6 +2430,7 @@ ShallowWrapper {
               bindIframeToParent={[Function]}
               channelId="twitch"
               className="view"
+              configuration={Object {}}
               extension={
                             Object {
                                           "authorName": "test",
@@ -2490,12 +2508,13 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": undefined,
+            "key": "ExtensionFrame{}",
             "nodeType": "class",
             "props": Object {
               "bindIframeToParent": [Function],
               "channelId": "twitch",
               "className": "view",
+              "configuration": Object {},
               "extension": Object {
                 "authorName": "test",
                 "bitsEnabled": false,
@@ -3373,6 +3392,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionView
     channelId="twitch"
+    configuration={Object {}}
     deleteViewHandler={[Function]}
     extension={
         Object {
@@ -3507,6 +3527,7 @@ ShallowWrapper {
           bindIframeToParent={[Function]}
           channelId="twitch"
           className="view"
+          configuration={Object {}}
           extension={
                     Object {
                               "authorName": "test",
@@ -3725,12 +3746,13 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "ExtensionMobileView{}",
         "nodeType": "class",
         "props": Object {
           "bindIframeToParent": [Function],
           "channelId": "twitch",
           "className": "view",
+          "configuration": Object {},
           "extension": Object {
             "authorName": "test",
             "bitsEnabled": false,
@@ -3849,6 +3871,7 @@ ShallowWrapper {
             bindIframeToParent={[Function]}
             channelId="twitch"
             className="view"
+            configuration={Object {}}
             extension={
                         Object {
                                     "authorName": "test",
@@ -4067,12 +4090,13 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "ExtensionMobileView{}",
           "nodeType": "class",
           "props": Object {
             "bindIframeToParent": [Function],
             "channelId": "twitch",
             "className": "view",
+            "configuration": Object {},
             "extension": Object {
               "authorName": "test",
               "bitsEnabled": false,
@@ -4168,6 +4192,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionView
     channelId="twitch"
+    configuration={Object {}}
     deleteViewHandler={[Function]}
     extension={
         Object {
@@ -4304,6 +4329,7 @@ ShallowWrapper {
                     bindIframeToParent={[Function]}
                     channelId="twitch"
                     className="view"
+                    configuration={Object {}}
                     extension={
                               Object {
                                         "authorName": "test",
@@ -4496,6 +4522,7 @@ ShallowWrapper {
             bindIframeToParent={[Function]}
             channelId="twitch"
             className="view"
+            configuration={Object {}}
             extension={
                         Object {
                                     "authorName": "test",
@@ -4573,12 +4600,13 @@ ShallowWrapper {
         "ref": null,
         "rendered": Object {
           "instance": null,
-          "key": undefined,
+          "key": "ExtensionFrame{}",
           "nodeType": "class",
           "props": Object {
             "bindIframeToParent": [Function],
             "channelId": "twitch",
             "className": "view",
+            "configuration": Object {},
             "extension": Object {
               "authorName": "test",
               "bitsEnabled": false,
@@ -4695,6 +4723,7 @@ ShallowWrapper {
                         bindIframeToParent={[Function]}
                         channelId="twitch"
                         className="view"
+                        configuration={Object {}}
                         extension={
                                     Object {
                                                 "authorName": "test",
@@ -4887,6 +4916,7 @@ ShallowWrapper {
               bindIframeToParent={[Function]}
               channelId="twitch"
               className="view"
+              configuration={Object {}}
               extension={
                             Object {
                                           "authorName": "test",
@@ -4964,12 +4994,13 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": undefined,
+            "key": "ExtensionFrame{}",
             "nodeType": "class",
             "props": Object {
               "bindIframeToParent": [Function],
               "channelId": "twitch",
               "className": "view",
+              "configuration": Object {},
               "extension": Object {
                 "authorName": "test",
                 "bitsEnabled": false,
@@ -5060,6 +5091,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionView
     channelId="twitch"
+    configuration={Object {}}
     deleteViewHandler={[Function]}
     extension={
         Object {
@@ -5197,6 +5229,7 @@ ShallowWrapper {
                     bindIframeToParent={[Function]}
                     channelId="twitch"
                     className="view"
+                    configuration={Object {}}
                     extension={
                               Object {
                                         "authorName": "test",
@@ -5391,6 +5424,7 @@ ShallowWrapper {
             bindIframeToParent={[Function]}
             channelId="twitch"
             className="view"
+            configuration={Object {}}
             extension={
                         Object {
                                     "authorName": "test",
@@ -5468,12 +5502,13 @@ ShallowWrapper {
         "ref": null,
         "rendered": Object {
           "instance": null,
-          "key": undefined,
+          "key": "ExtensionFrame{}",
           "nodeType": "class",
           "props": Object {
             "bindIframeToParent": [Function],
             "channelId": "twitch",
             "className": "view",
+            "configuration": Object {},
             "extension": Object {
               "authorName": "test",
               "bitsEnabled": false,
@@ -5591,6 +5626,7 @@ ShallowWrapper {
                         bindIframeToParent={[Function]}
                         channelId="twitch"
                         className="view"
+                        configuration={Object {}}
                         extension={
                                     Object {
                                                 "authorName": "test",
@@ -5785,6 +5821,7 @@ ShallowWrapper {
               bindIframeToParent={[Function]}
               channelId="twitch"
               className="view"
+              configuration={Object {}}
               extension={
                             Object {
                                           "authorName": "test",
@@ -5862,12 +5899,13 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": undefined,
+            "key": "ExtensionFrame{}",
             "nodeType": "class",
             "props": Object {
               "bindIframeToParent": [Function],
               "channelId": "twitch",
               "className": "view",
+              "configuration": Object {},
               "extension": Object {
                 "authorName": "test",
                 "bitsEnabled": false,
@@ -5958,6 +5996,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionView
     channelId="twitch"
+    configuration={Object {}}
     deleteViewHandler={[Function]}
     extension={
         Object {
@@ -6095,6 +6134,7 @@ ShallowWrapper {
                     bindIframeToParent={[Function]}
                     channelId="twitch"
                     className="view"
+                    configuration={Object {}}
                     extension={
                               Object {
                                         "authorName": "test",
@@ -6289,6 +6329,7 @@ ShallowWrapper {
             bindIframeToParent={[Function]}
             channelId="twitch"
             className="view"
+            configuration={Object {}}
             extension={
                         Object {
                                     "authorName": "test",
@@ -6366,12 +6407,13 @@ ShallowWrapper {
         "ref": null,
         "rendered": Object {
           "instance": null,
-          "key": undefined,
+          "key": "ExtensionFrame{}",
           "nodeType": "class",
           "props": Object {
             "bindIframeToParent": [Function],
             "channelId": "twitch",
             "className": "view",
+            "configuration": Object {},
             "extension": Object {
               "authorName": "test",
               "bitsEnabled": false,
@@ -6489,6 +6531,7 @@ ShallowWrapper {
                         bindIframeToParent={[Function]}
                         channelId="twitch"
                         className="view"
+                        configuration={Object {}}
                         extension={
                                     Object {
                                                 "authorName": "test",
@@ -6683,6 +6726,7 @@ ShallowWrapper {
               bindIframeToParent={[Function]}
               channelId="twitch"
               className="view"
+              configuration={Object {}}
               extension={
                             Object {
                                           "authorName": "test",
@@ -6760,12 +6804,13 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": undefined,
+            "key": "ExtensionFrame{}",
             "nodeType": "class",
             "props": Object {
               "bindIframeToParent": [Function],
               "channelId": "twitch",
               "className": "view",
+              "configuration": Object {},
               "extension": Object {
                 "authorName": "test",
                 "bitsEnabled": false,
@@ -6856,6 +6901,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionView
     channelId="twitch"
+    configuration={Object {}}
     deleteViewHandler={[Function]}
     extension={
         Object {
@@ -6992,6 +7038,7 @@ ShallowWrapper {
                     bindIframeToParent={[Function]}
                     channelId="twitch"
                     className="view"
+                    configuration={Object {}}
                     extension={
                               Object {
                                         "authorName": "test",
@@ -7184,6 +7231,7 @@ ShallowWrapper {
             bindIframeToParent={[Function]}
             channelId="twitch"
             className="view"
+            configuration={Object {}}
             extension={
                         Object {
                                     "authorName": "test",
@@ -7261,12 +7309,13 @@ ShallowWrapper {
         "ref": null,
         "rendered": Object {
           "instance": null,
-          "key": undefined,
+          "key": "ExtensionFrame{}",
           "nodeType": "class",
           "props": Object {
             "bindIframeToParent": [Function],
             "channelId": "twitch",
             "className": "view",
+            "configuration": Object {},
             "extension": Object {
               "authorName": "test",
               "bitsEnabled": false,
@@ -7383,6 +7432,7 @@ ShallowWrapper {
                         bindIframeToParent={[Function]}
                         channelId="twitch"
                         className="view"
+                        configuration={Object {}}
                         extension={
                                     Object {
                                                 "authorName": "test",
@@ -7575,6 +7625,7 @@ ShallowWrapper {
               bindIframeToParent={[Function]}
               channelId="twitch"
               className="view"
+              configuration={Object {}}
               extension={
                             Object {
                                           "authorName": "test",
@@ -7652,12 +7703,13 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": undefined,
+            "key": "ExtensionFrame{}",
             "nodeType": "class",
             "props": Object {
               "bindIframeToParent": [Function],
               "channelId": "twitch",
               "className": "view",
+              "configuration": Object {},
               "extension": Object {
                 "authorName": "test",
                 "bitsEnabled": false,
@@ -7748,6 +7800,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionView
     channelId="twitch"
+    configuration={Object {}}
     deleteViewHandler={[Function]}
     extension={
         Object {
@@ -7884,6 +7937,7 @@ ShallowWrapper {
                     bindIframeToParent={[Function]}
                     channelId="twitch"
                     className="view"
+                    configuration={Object {}}
                     extension={
                               Object {
                                         "authorName": "test",
@@ -8076,6 +8130,7 @@ ShallowWrapper {
             bindIframeToParent={[Function]}
             channelId="twitch"
             className="view"
+            configuration={Object {}}
             extension={
                         Object {
                                     "authorName": "test",
@@ -8153,12 +8208,13 @@ ShallowWrapper {
         "ref": null,
         "rendered": Object {
           "instance": null,
-          "key": undefined,
+          "key": "ExtensionFrame{}",
           "nodeType": "class",
           "props": Object {
             "bindIframeToParent": [Function],
             "channelId": "twitch",
             "className": "view",
+            "configuration": Object {},
             "extension": Object {
               "authorName": "test",
               "bitsEnabled": false,
@@ -8275,6 +8331,7 @@ ShallowWrapper {
                         bindIframeToParent={[Function]}
                         channelId="twitch"
                         className="view"
+                        configuration={Object {}}
                         extension={
                                     Object {
                                                 "authorName": "test",
@@ -8467,6 +8524,7 @@ ShallowWrapper {
               bindIframeToParent={[Function]}
               channelId="twitch"
               className="view"
+              configuration={Object {}}
               extension={
                             Object {
                                           "authorName": "test",
@@ -8544,12 +8602,13 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": undefined,
+            "key": "ExtensionFrame{}",
             "nodeType": "class",
             "props": Object {
               "bindIframeToParent": [Function],
               "channelId": "twitch",
               "className": "view",
+              "configuration": Object {},
               "extension": Object {
                 "authorName": "test",
                 "bitsEnabled": false,
@@ -8640,6 +8699,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionView
     channelId="twitch"
+    configuration={Object {}}
     deleteViewHandler={[Function]}
     extension={
         Object {
@@ -8777,6 +8837,7 @@ ShallowWrapper {
                     bindIframeToParent={[Function]}
                     channelId="twitch"
                     className="view"
+                    configuration={Object {}}
                     extension={
                               Object {
                                         "authorName": "test",
@@ -8971,6 +9032,7 @@ ShallowWrapper {
             bindIframeToParent={[Function]}
             channelId="twitch"
             className="view"
+            configuration={Object {}}
             extension={
                         Object {
                                     "authorName": "test",
@@ -9048,12 +9110,13 @@ ShallowWrapper {
         "ref": null,
         "rendered": Object {
           "instance": null,
-          "key": undefined,
+          "key": "ExtensionFrame{}",
           "nodeType": "class",
           "props": Object {
             "bindIframeToParent": [Function],
             "channelId": "twitch",
             "className": "view",
+            "configuration": Object {},
             "extension": Object {
               "authorName": "test",
               "bitsEnabled": false,
@@ -9171,6 +9234,7 @@ ShallowWrapper {
                         bindIframeToParent={[Function]}
                         channelId="twitch"
                         className="view"
+                        configuration={Object {}}
                         extension={
                                     Object {
                                                 "authorName": "test",
@@ -9365,6 +9429,7 @@ ShallowWrapper {
               bindIframeToParent={[Function]}
               channelId="twitch"
               className="view"
+              configuration={Object {}}
               extension={
                             Object {
                                           "authorName": "test",
@@ -9442,12 +9507,13 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": undefined,
+            "key": "ExtensionFrame{}",
             "nodeType": "class",
             "props": Object {
               "bindIframeToParent": [Function],
               "channelId": "twitch",
               "className": "view",
+              "configuration": Object {},
               "extension": Object {
                 "authorName": "test",
                 "bitsEnabled": false,
@@ -9538,6 +9604,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionView
     channelId="twitch"
+    configuration={Object {}}
     deleteViewHandler={[Function]}
     extension={
         Object {
@@ -9675,6 +9742,7 @@ ShallowWrapper {
                     bindIframeToParent={[Function]}
                     channelId="twitch"
                     className="view"
+                    configuration={Object {}}
                     extension={
                               Object {
                                         "authorName": "test",
@@ -9869,6 +9937,7 @@ ShallowWrapper {
             bindIframeToParent={[Function]}
             channelId="twitch"
             className="view"
+            configuration={Object {}}
             extension={
                         Object {
                                     "authorName": "test",
@@ -9946,12 +10015,13 @@ ShallowWrapper {
         "ref": null,
         "rendered": Object {
           "instance": null,
-          "key": undefined,
+          "key": "ExtensionFrame{}",
           "nodeType": "class",
           "props": Object {
             "bindIframeToParent": [Function],
             "channelId": "twitch",
             "className": "view",
+            "configuration": Object {},
             "extension": Object {
               "authorName": "test",
               "bitsEnabled": false,
@@ -10069,6 +10139,7 @@ ShallowWrapper {
                         bindIframeToParent={[Function]}
                         channelId="twitch"
                         className="view"
+                        configuration={Object {}}
                         extension={
                                     Object {
                                                 "authorName": "test",
@@ -10263,6 +10334,7 @@ ShallowWrapper {
               bindIframeToParent={[Function]}
               channelId="twitch"
               className="view"
+              configuration={Object {}}
               extension={
                             Object {
                                           "authorName": "test",
@@ -10340,12 +10412,13 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": undefined,
+            "key": "ExtensionFrame{}",
             "nodeType": "class",
             "props": Object {
               "bindIframeToParent": [Function],
               "channelId": "twitch",
               "className": "view",
+              "configuration": Object {},
               "extension": Object {
                 "authorName": "test",
                 "bitsEnabled": false,
@@ -10436,6 +10509,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionView
     channelId="twitch"
+    configuration={Object {}}
     deleteViewHandler={[Function]}
     extension={
         Object {
@@ -10572,6 +10646,7 @@ ShallowWrapper {
                     bindIframeToParent={[Function]}
                     channelId="twitch"
                     className="view"
+                    configuration={Object {}}
                     extension={
                               Object {
                                         "authorName": "test",
@@ -10764,6 +10839,7 @@ ShallowWrapper {
             bindIframeToParent={[Function]}
             channelId="twitch"
             className="view"
+            configuration={Object {}}
             extension={
                         Object {
                                     "authorName": "test",
@@ -10841,12 +10917,13 @@ ShallowWrapper {
         "ref": null,
         "rendered": Object {
           "instance": null,
-          "key": undefined,
+          "key": "ExtensionFrame{}",
           "nodeType": "class",
           "props": Object {
             "bindIframeToParent": [Function],
             "channelId": "twitch",
             "className": "view",
+            "configuration": Object {},
             "extension": Object {
               "authorName": "test",
               "bitsEnabled": false,
@@ -10963,6 +11040,7 @@ ShallowWrapper {
                         bindIframeToParent={[Function]}
                         channelId="twitch"
                         className="view"
+                        configuration={Object {}}
                         extension={
                                     Object {
                                                 "authorName": "test",
@@ -11155,6 +11233,7 @@ ShallowWrapper {
               bindIframeToParent={[Function]}
               channelId="twitch"
               className="view"
+              configuration={Object {}}
               extension={
                             Object {
                                           "authorName": "test",
@@ -11232,12 +11311,13 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": undefined,
+            "key": "ExtensionFrame{}",
             "nodeType": "class",
             "props": Object {
               "bindIframeToParent": [Function],
               "channelId": "twitch",
               "className": "view",
+              "configuration": Object {},
               "extension": Object {
                 "authorName": "test",
                 "bitsEnabled": false,
@@ -11328,6 +11408,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ExtensionView
     channelId="twitch"
+    configuration={Object {}}
     deleteViewHandler={[Function]}
     extension={
         Object {
@@ -11449,6 +11530,7 @@ ShallowWrapper {
                     bindIframeToParent={[Function]}
                     channelId="twitch"
                     className="view"
+                    configuration={Object {}}
                     extension={
                               Object {
                                         "authorName": "test",
@@ -11626,6 +11708,7 @@ ShallowWrapper {
             bindIframeToParent={[Function]}
             channelId="twitch"
             className="view"
+            configuration={Object {}}
             extension={
                         Object {
                                     "authorName": "test",
@@ -11688,12 +11771,13 @@ ShallowWrapper {
         "ref": null,
         "rendered": Object {
           "instance": null,
-          "key": undefined,
+          "key": "ExtensionFrame{}",
           "nodeType": "class",
           "props": Object {
             "bindIframeToParent": [Function],
             "channelId": "twitch",
             "className": "view",
+            "configuration": Object {},
             "extension": Object {
               "authorName": "test",
               "bitsEnabled": false,
@@ -11795,6 +11879,7 @@ ShallowWrapper {
                         bindIframeToParent={[Function]}
                         channelId="twitch"
                         className="view"
+                        configuration={Object {}}
                         extension={
                                     Object {
                                                 "authorName": "test",
@@ -11972,6 +12057,7 @@ ShallowWrapper {
               bindIframeToParent={[Function]}
               channelId="twitch"
               className="view"
+              configuration={Object {}}
               extension={
                             Object {
                                           "authorName": "test",
@@ -12034,12 +12120,13 @@ ShallowWrapper {
           "ref": null,
           "rendered": Object {
             "instance": null,
-            "key": undefined,
+            "key": "ExtensionFrame{}",
             "nodeType": "class",
             "props": Object {
               "bindIframeToParent": [Function],
               "channelId": "twitch",
               "className": "view",
+              "configuration": Object {},
               "extension": Object {
                 "authorName": "test",
                 "bitsEnabled": false,

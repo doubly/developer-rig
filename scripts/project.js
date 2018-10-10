@@ -26,9 +26,7 @@ module.exports = function(app) {
       description: 'Front-end-only React-based example to get you started building quickly.',
       repository: 'twitchdev/extensions-boilerplate',
       frontendFolderName: 'extensions-boilerplate',
-      frontendCommand: process.platform === 'win32' ?
-        'node "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" run host' :
-        'node /usr/local/lib/node_modules/npm/bin/npm-cli.js run host',
+      frontendCommand: 'npm run host',
       backendCommand: '',
       npm: ['i'],
       sslFolderName: 'conf',
@@ -77,6 +75,9 @@ module.exports = function(app) {
           options.cwd = frontendFolderPath;
         } else if (projectFolderPath) {
           options.cwd = join(projectFolderPath, frontendFolderPath);
+        }
+        if (process.platform === 'win32') {
+          options.shell = true;
         }
       } else {
         args = [
@@ -192,7 +193,11 @@ module.exports = function(app) {
 
     async function stop(child) {
       if (child) {
-        child.kill();
+        if (process.platform === 'win32') {
+          childProcess.spawnSync('taskkill', ['/f', '/pid', child.pid, '/t']);
+        } else {
+          child.kill();
+        }
         return await new Promise((resolve, _) => {
           let hasResolved = false;
           child.stderr.on('data', (data) => process.stderr.write(data.toString()));

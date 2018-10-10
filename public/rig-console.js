@@ -1,6 +1,6 @@
 const MAX_HISTORY_SIZE = 500;
 
-window.rig = {};
+window.rig = { update: () => { } };
 window.rig.history = [];
 window.rig.log = (log, frame) => {
   if (!frame) {

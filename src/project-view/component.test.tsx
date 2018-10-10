@@ -32,6 +32,7 @@ describe('<ProjectView />', () => {
     },
     userId: '999999999',
     onChange: () => { },
+    refreshViews: jest.fn(),
   }));
 
   it('renders correctly', () => {

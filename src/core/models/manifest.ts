@@ -4,6 +4,7 @@ export interface ExtensionManifest {
   authorName: string;
   bitsEnabled: boolean;
   description: string;
+  hasChatSupport: boolean;
   iconUrls: {
     '100x100': string;
     '24x24'?: string;

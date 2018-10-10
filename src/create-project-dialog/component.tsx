@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as closeButton from '../img/close_icon.png';
 import './component.sass';
+import classNames = require('classnames');
 import { ExtensionManifest } from '../core/models/manifest';
 import { createProject, Example, fetchExamples } from '../util/api';
 import { RigProject } from '../core/models/rig';
@@ -150,8 +151,8 @@ export class CreateProjectDialog extends React.Component<Props, State>{
     return true;
   }
 
-  private getTypes(): string[] {
-    const types: string[] = [];
+  private getTypes(): ExtensionViewType[] {
+    const types: ExtensionViewType[] = [];
     this.state.extensionTypes & ExtensionTypes.Component && types.push(ExtensionViewType.Component);
     this.state.extensionTypes & ExtensionTypes.Mobile && types.push(ExtensionViewType.Mobile);
     this.state.extensionTypes & ExtensionTypes.Overlay && types.push(ExtensionViewType.Overlay);
@@ -215,24 +216,28 @@ export class CreateProjectDialog extends React.Component<Props, State>{
     }
   }
 
-  private constructStringClassName(condition: boolean | string, name: string, modifier?: string) {
-    return `${name}${modifier ? ` ${name}--${modifier}` : ''}` + (condition ? '' : ` ${name}--error`);
+  private constructClassName(isSuccessful: boolean | string, name: string, modifier?: string) {
+    return classNames(name, {
+      [`${name}--${modifier}`]: !!modifier,
+      [`${name}--error`]: !isSuccessful,
+    });
   }
 
   public render() {
     const pdp = 'project-dialog-property';
     const [pdpi, pdpri] = [`${pdp}__input`, `${pdp}__right-input`];
     const { codeGenerationOption, extensionTypes, rigProject } = this.state;
-    const nameInputClassName = this.constructStringClassName(!rigProject.isLocal || this.state.localName.trim(), pdpi, 'half');
+    const nameInputClassName = this.constructClassName(!rigProject.isLocal || this.state.localName.trim(), pdpi, 'half');
     const localName = rigProject.isLocal ? this.state.localName : rigProject.manifest.name || '';
-    const typesClassName = this.constructStringClassName(extensionTypes !== 0, `${pdp}__name`);
-    const clientIdClassName = this.constructStringClassName(this.state.clientId.trim(), pdpri, 'grid');
-    const secretClassName = this.constructStringClassName(rigProject.secret.trim(), pdpri, 'grid');
-    const versionClassName = this.constructStringClassName(this.state.version.trim(), pdpri, 'grid');
-    const manifestClassName = this.constructStringClassName(rigProject.manifest.id, `${pdp}__textarea`);
-    const projectFolderClassName = pdpi +
-      (codeGenerationOption === CodeGenerationOption.None || rigProject.projectFolderPath.trim() ? '' : ` ${pdpi}--error`);
-    const saveClassName = 'bottom-bar__save' + (this.canSave() ? '' : ' bottom-bar__save--disabled');
+    const typesClassName = this.constructClassName(extensionTypes !== 0, `${pdp}__name`);
+    const clientIdClassName = this.constructClassName(this.state.clientId.trim(), pdpri, 'grid');
+    const secretClassName = this.constructClassName(rigProject.secret.trim(), pdpri, 'grid');
+    const versionClassName = this.constructClassName(this.state.version.trim(), pdpri, 'grid');
+    const manifestClassName = this.constructClassName(rigProject.manifest.id, `${pdp}__textarea`);
+    const projectFolderClassName = classNames(pdpi, {
+      [`${pdpi}--error`]: !(codeGenerationOption === CodeGenerationOption.None || rigProject.projectFolderPath.trim()),
+    });
+    const saveClassName = classNames('bottom-bar__save', { 'bottom-bar__save--disabled': !this.canSave() });
     return (
       <div className="project-dialog">
         <div className="project-dialog__background" />

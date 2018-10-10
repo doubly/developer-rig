@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ProjectView
     onChange={[Function]}
+    refreshViews={[Function]}
     rigProject={
         Object {
             "backendCommand": "test",
@@ -17,6 +18,7 @@ ShallowWrapper {
               "authorName": "test",
               "bitsEnabled": true,
               "description": "test",
+              "hasChatSupport": false,
               "iconUrls": Object {
                 "100x100": "test",
               },

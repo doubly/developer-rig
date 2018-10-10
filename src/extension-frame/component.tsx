@@ -5,7 +5,7 @@ import { ExtensionPlatform, ExtensionViewType } from '../constants/extension-coo
 const IFRAME_CLASS = 'extension-frame';
 const EXTENSION_FRAME_INIT_ACTION = 'extension-frame-init';
 
-export interface PublicProps {
+export interface Props {
   channelId: string;
   className: string;
   frameId: string;
@@ -16,8 +16,6 @@ export interface PublicProps {
   isPopout: boolean;
   bindIframeToParent: (iframe: HTMLIFrameElement) => void;
 }
-
-type Props = PublicProps;
 
 export class ExtensionFrame extends React.Component<Props> {
   public iframe: HTMLIFrameElement;
@@ -46,7 +44,7 @@ export class ExtensionFrame extends React.Component<Props> {
   }
 
   public extensionFrameInit = () => {
-    const extensionFrameParams: ExtensionCoordinator.ExtensionFrameParams = {
+    const extensionFrameOptions: ExtensionCoordinator.ExtensionFrameOptions = {
       anchor: this.props.type as ExtensionCoordinator.ExtensionAnchor,
       channelId: parseInt(this.props.channelId, 10),
       extension: this.props.extension,
@@ -61,7 +59,7 @@ export class ExtensionFrame extends React.Component<Props> {
 
     const data = {
       action: EXTENSION_FRAME_INIT_ACTION,
-      parameters: extensionFrameParams,
+      parameters: extensionFrameOptions,
       channelId: this.props.channelId,
       frameId: this.props.frameId,
     };

@@ -8,6 +8,7 @@ export interface ProjectViewProps {
   rigProject: RigProject,
   userId: string;
   onChange: (rigProject: RigProject) => void,
+  refreshViews: () => void,
 }
 
 enum HostingResult {
@@ -69,6 +70,7 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
           await startBackend(rigProject.backendCommand, rigProject.projectFolderPath);
           this.setState({ backendResult: HostingResult.Running });
         }
+        this.props.refreshViews();
       } catch (ex) {
         this.setState({ backendResult: ex.message });
       }
@@ -104,6 +106,7 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
           await hostFrontend(rigProject.frontendFolderName, rigProject.isLocal, frontendPort, rigProject.projectFolderPath);
           this.setState({ frontendResult: HostingResult.Started });
         }
+        this.props.refreshViews();
       } catch (ex) {
         this.setState({ frontendResult: ex.message });
       }
@@ -133,8 +136,8 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
   }
 
   private refreshManifest = async () => {
-    const { secret, manifest: { id: clientId, version } } = this.props.rigProject;
-    const manifest = await fetchUserExtensionManifest(false, this.props.userId, secret, clientId, version);
+    const { isLocal, secret, manifest: { id: clientId, version } } = this.props.rigProject;
+    const manifest = await fetchUserExtensionManifest(isLocal, this.props.userId, secret, clientId, version);
     this.props.onChange({ manifest } as any as RigProject);
   }
 

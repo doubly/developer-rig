@@ -32,31 +32,22 @@ ShallowWrapper {
       "children": Array [
         <Connect(RigNavComponent)
           createNewProject={[Function]}
-          currentProjectIndex={0}
+          currentProjectIndex={-1}
           error={undefined}
-          manifest={undefined}
-          projects={
-                    Array [
-                              Object {},
-                              Object {},
-                            ]
-          }
+          manifest={null}
+          projects={Array []}
           selectProject={[Function]}
-          selectedView="Extension Views"
+          selectedView={2}
           viewerHandler={[Function]}
 />,
-        <div>
-          <ExtensionViewContainer
-                    deleteExtensionViewHandler={[Function]}
-                    extensionViews={undefined}
-                    isLocal={undefined}
-                    manifest={undefined}
-                    openEditViewHandler={[Function]}
-                    openExtensionViewHandler={[Function]}
-                    secret={undefined}
+        <Unknown>
+          <CreateProjectDialog
+                    closeHandler={[Function]}
+                    mustSave={true}
+                    saveHandler={[Function]}
+                    userId={undefined}
           />
-          <Console />
-</div>,
+</Unknown>,
       ],
       "className": "rig-container",
     },
@@ -68,15 +59,12 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "createNewProject": [Function],
-          "currentProjectIndex": 0,
+          "currentProjectIndex": -1,
           "error": undefined,
-          "manifest": undefined,
-          "projects": Array [
-            Object {},
-            Object {},
-          ],
+          "manifest": null,
+          "projects": Array [],
           "selectProject": [Function],
-          "selectedView": "Extension Views",
+          "selectedView": 2,
           "viewerHandler": [Function],
         },
         "ref": null,
@@ -86,37 +74,36 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "function",
         "props": Object {
           "children": Array [
-            <ExtensionViewContainer
-              deleteExtensionViewHandler={[Function]}
-              extensionViews={undefined}
-              isLocal={undefined}
-              manifest={undefined}
-              openEditViewHandler={[Function]}
-              openExtensionViewHandler={[Function]}
-              secret={undefined}
+            false,
+            undefined,
+            undefined,
+            <CreateProjectDialog
+              closeHandler={[Function]}
+              mustSave={true}
+              saveHandler={[Function]}
+              userId={undefined}
 />,
             false,
             false,
-            <Console />,
           ],
         },
         "ref": null,
         "rendered": Array [
+          false,
+          undefined,
+          undefined,
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "deleteExtensionViewHandler": [Function],
-              "extensionViews": undefined,
-              "isLocal": undefined,
-              "manifest": undefined,
-              "openEditViewHandler": [Function],
-              "openExtensionViewHandler": [Function],
-              "secret": undefined,
+              "closeHandler": [Function],
+              "mustSave": true,
+              "saveHandler": [Function],
+              "userId": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -124,17 +111,8 @@ ShallowWrapper {
           },
           false,
           false,
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {},
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
         ],
-        "type": "div",
+        "type": Symbol(react.fragment),
       },
     ],
     "type": "div",
@@ -148,31 +126,22 @@ ShallowWrapper {
         "children": Array [
           <Connect(RigNavComponent)
             createNewProject={[Function]}
-            currentProjectIndex={0}
+            currentProjectIndex={-1}
             error={undefined}
-            manifest={undefined}
-            projects={
-                        Array [
-                                    Object {},
-                                    Object {},
-                                  ]
-            }
+            manifest={null}
+            projects={Array []}
             selectProject={[Function]}
-            selectedView="Extension Views"
+            selectedView={2}
             viewerHandler={[Function]}
 />,
-          <div>
-            <ExtensionViewContainer
-                        deleteExtensionViewHandler={[Function]}
-                        extensionViews={undefined}
-                        isLocal={undefined}
-                        manifest={undefined}
-                        openEditViewHandler={[Function]}
-                        openExtensionViewHandler={[Function]}
-                        secret={undefined}
+          <Unknown>
+            <CreateProjectDialog
+                        closeHandler={[Function]}
+                        mustSave={true}
+                        saveHandler={[Function]}
+                        userId={undefined}
             />
-            <Console />
-</div>,
+</Unknown>,
         ],
         "className": "rig-container",
       },
@@ -184,15 +153,12 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "createNewProject": [Function],
-            "currentProjectIndex": 0,
+            "currentProjectIndex": -1,
             "error": undefined,
-            "manifest": undefined,
-            "projects": Array [
-              Object {},
-              Object {},
-            ],
+            "manifest": null,
+            "projects": Array [],
             "selectProject": [Function],
-            "selectedView": "Extension Views",
+            "selectedView": 2,
             "viewerHandler": [Function],
           },
           "ref": null,
@@ -202,37 +168,36 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "function",
           "props": Object {
             "children": Array [
-              <ExtensionViewContainer
-                deleteExtensionViewHandler={[Function]}
-                extensionViews={undefined}
-                isLocal={undefined}
-                manifest={undefined}
-                openEditViewHandler={[Function]}
-                openExtensionViewHandler={[Function]}
-                secret={undefined}
+              false,
+              undefined,
+              undefined,
+              <CreateProjectDialog
+                closeHandler={[Function]}
+                mustSave={true}
+                saveHandler={[Function]}
+                userId={undefined}
 />,
               false,
               false,
-              <Console />,
             ],
           },
           "ref": null,
           "rendered": Array [
+            false,
+            undefined,
+            undefined,
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "deleteExtensionViewHandler": [Function],
-                "extensionViews": undefined,
-                "isLocal": undefined,
-                "manifest": undefined,
-                "openEditViewHandler": [Function],
-                "openExtensionViewHandler": [Function],
-                "secret": undefined,
+                "closeHandler": [Function],
+                "mustSave": true,
+                "saveHandler": [Function],
+                "userId": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -240,17 +205,8 @@ ShallowWrapper {
             },
             false,
             false,
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {},
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
           ],
-          "type": "div",
+          "type": Symbol(react.fragment),
         },
       ],
       "type": "div",
@@ -300,7 +256,7 @@ ShallowWrapper {
           createNewProject={[Function]}
           currentProjectIndex={0}
           error={undefined}
-          manifest={undefined}
+          manifest={Object {}}
           projects={
                     Array [
                               Object {
@@ -323,14 +279,15 @@ ShallowWrapper {
                                     "y": 0,
                                   },
                                 ],
+                                "manifest": Object {},
                               },
                             ]
           }
           selectProject={[Function]}
-          selectedView="Extension Views"
+          selectedView={0}
           viewerHandler={[Function]}
 />,
-        <div>
+        <Unknown>
           <ExtensionViewContainer
                     deleteExtensionViewHandler={[Function]}
                     extensionViews={
@@ -354,14 +311,14 @@ ShallowWrapper {
                                         },
                                       ]
                     }
+                    isDisplayed={true}
                     isLocal={undefined}
-                    manifest={undefined}
+                    manifest={Object {}}
                     openEditViewHandler={[Function]}
                     openExtensionViewHandler={[Function]}
                     secret={undefined}
           />
-          <Console />
-</div>,
+</Unknown>,
       ],
       "className": "rig-container",
     },
@@ -375,7 +332,7 @@ ShallowWrapper {
           "createNewProject": [Function],
           "currentProjectIndex": 0,
           "error": undefined,
-          "manifest": undefined,
+          "manifest": Object {},
           "projects": Array [
             Object {
               "extensionViews": Array [
@@ -397,10 +354,11 @@ ShallowWrapper {
                   "y": 0,
                 },
               ],
+              "manifest": Object {},
             },
           ],
           "selectProject": [Function],
-          "selectedView": "Extension Views",
+          "selectedView": 0,
           "viewerHandler": [Function],
         },
         "ref": null,
@@ -410,9 +368,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "function",
         "props": Object {
           "children": Array [
+            false,
+            false,
             <ExtensionViewContainer
               deleteExtensionViewHandler={[Function]}
               extensionViews={
@@ -436,22 +396,25 @@ ShallowWrapper {
                                           },
                                         ]
               }
+              isDisplayed={true}
               isLocal={undefined}
-              manifest={undefined}
+              manifest={Object {}}
               openEditViewHandler={[Function]}
               openExtensionViewHandler={[Function]}
               secret={undefined}
 />,
             false,
             false,
-            <Console />,
+            false,
           ],
         },
         "ref": null,
         "rendered": Array [
+          false,
+          false,
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "ExtensionViewContainer0",
             "nodeType": "class",
             "props": Object {
               "deleteExtensionViewHandler": [Function],
@@ -474,8 +437,9 @@ ShallowWrapper {
                   "y": 0,
                 },
               ],
+              "isDisplayed": true,
               "isLocal": undefined,
-              "manifest": undefined,
+              "manifest": Object {},
               "openEditViewHandler": [Function],
               "openExtensionViewHandler": [Function],
               "secret": undefined,
@@ -486,17 +450,9 @@ ShallowWrapper {
           },
           false,
           false,
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {},
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+          false,
         ],
-        "type": "div",
+        "type": Symbol(react.fragment),
       },
     ],
     "type": "div",
@@ -512,7 +468,7 @@ ShallowWrapper {
             createNewProject={[Function]}
             currentProjectIndex={0}
             error={undefined}
-            manifest={undefined}
+            manifest={Object {}}
             projects={
                         Array [
                                     Object {
@@ -535,14 +491,15 @@ ShallowWrapper {
                                           "y": 0,
                                         },
                                       ],
+                                      "manifest": Object {},
                                     },
                                   ]
             }
             selectProject={[Function]}
-            selectedView="Extension Views"
+            selectedView={0}
             viewerHandler={[Function]}
 />,
-          <div>
+          <Unknown>
             <ExtensionViewContainer
                         deleteExtensionViewHandler={[Function]}
                         extensionViews={
@@ -566,14 +523,14 @@ ShallowWrapper {
                                                 },
                                               ]
                         }
+                        isDisplayed={true}
                         isLocal={undefined}
-                        manifest={undefined}
+                        manifest={Object {}}
                         openEditViewHandler={[Function]}
                         openExtensionViewHandler={[Function]}
                         secret={undefined}
             />
-            <Console />
-</div>,
+</Unknown>,
         ],
         "className": "rig-container",
       },
@@ -587,7 +544,7 @@ ShallowWrapper {
             "createNewProject": [Function],
             "currentProjectIndex": 0,
             "error": undefined,
-            "manifest": undefined,
+            "manifest": Object {},
             "projects": Array [
               Object {
                 "extensionViews": Array [
@@ -609,10 +566,11 @@ ShallowWrapper {
                     "y": 0,
                   },
                 ],
+                "manifest": Object {},
               },
             ],
             "selectProject": [Function],
-            "selectedView": "Extension Views",
+            "selectedView": 0,
             "viewerHandler": [Function],
           },
           "ref": null,
@@ -622,9 +580,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "function",
           "props": Object {
             "children": Array [
+              false,
+              false,
               <ExtensionViewContainer
                 deleteExtensionViewHandler={[Function]}
                 extensionViews={
@@ -648,22 +608,25 @@ ShallowWrapper {
                                                 },
                                               ]
                 }
+                isDisplayed={true}
                 isLocal={undefined}
-                manifest={undefined}
+                manifest={Object {}}
                 openEditViewHandler={[Function]}
                 openExtensionViewHandler={[Function]}
                 secret={undefined}
 />,
               false,
               false,
-              <Console />,
+              false,
             ],
           },
           "ref": null,
           "rendered": Array [
+            false,
+            false,
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "ExtensionViewContainer0",
               "nodeType": "class",
               "props": Object {
                 "deleteExtensionViewHandler": [Function],
@@ -686,8 +649,9 @@ ShallowWrapper {
                     "y": 0,
                   },
                 ],
+                "isDisplayed": true,
                 "isLocal": undefined,
-                "manifest": undefined,
+                "manifest": Object {},
                 "openEditViewHandler": [Function],
                 "openExtensionViewHandler": [Function],
                 "secret": undefined,
@@ -698,17 +662,9 @@ ShallowWrapper {
             },
             false,
             false,
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {},
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
+            false,
           ],
-          "type": "div",
+          "type": Symbol(react.fragment),
         },
       ],
       "type": "div",

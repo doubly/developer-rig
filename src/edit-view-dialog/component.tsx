@@ -3,7 +3,7 @@ import * as closeButton from '../img/close_icon.png';
 import './component.sass';
 import { RadioOption } from '../extension-view-dialog/radio-option';
 import { DefaultMobileOrientation } from '../constants/mobile';
-import { MobileOrientation} from '../constants/mobile';
+import { MobileOrientation } from '../constants/mobile';
 import { RigExtensionView } from '../core/models/rig';
 import { ExtensionViewType } from '../constants/extension-coordinator';
 
@@ -68,28 +68,18 @@ export class EditViewDialog extends React.Component<Props, State> {
   }
 
   private editClassFromType() {
-    let editClass;
-    switch (this.state.type) {
-      case ExtensionViewType.Component:
-        editClass = 'edit-view__dialog-component';
-        break;
-      case ExtensionViewType.Mobile:
-        editClass = 'edit-view__dialog-mobile';
-        break;
-      default:
-        editClass = 'edit-view__dialog'
-    }
-    return editClass;
+    return this.state.type === ExtensionViewType.Component ? 'edit-view__dialog-component' :
+      this.state.type === ExtensionViewType.Mobile ? 'edit-view__dialog-mobile' : 'edit-view__dialog';
   }
 
   public render() {
     return (
       <div className='edit-view'>
-        <div className="edit-view__background"/>
+        <div className="edit-view__background" />
         <div className={this.editClassFromType()}>
           <div className="dialog__top-bar-container">
             <div className="top-bar-container__title"> Edit View </div>
-            <div className="top-bar-container__escape" onClick={this.props.closeHandler}><img alt="Close" src={closeButton}/></div>
+            <div className="top-bar-container__escape" onClick={this.props.closeHandler}><img alt="Close" src={closeButton} /></div>
           </div>
           <hr className="dialog__divider" />
 
@@ -112,7 +102,7 @@ export class EditViewDialog extends React.Component<Props, State> {
               </div>
             </div>}
 
-            {this.state.type === ExtensionViewType.Mobile &&
+          {this.state.type === ExtensionViewType.Mobile &&
             <div className="size-title__size-subcontainer">
               <div className="size-subcontainer__presets">
                 <div className="type-and-size-container__type-title">
@@ -124,7 +114,7 @@ export class EditViewDialog extends React.Component<Props, State> {
               </div>
             </div>}
 
-          <hr className="dialog__divider"/>
+          <hr className="dialog__divider" />
           <div className="dialog_bottom-bar">
             <div className="bottom-bar__save" onClick={() => this.props.saveViewHandler(this.state)}> Save </div>
             <div className="bottom-bar__cancel" onClick={this.props.closeHandler}> Cancel </div>

@@ -10,6 +10,7 @@ describe('extension', () => {
     authorName: 'test',
     bitsEnabled: true,
     description: 'test',
+    hasChatSupport: false,
     iconUrls: {
       '100x100': 'test',
     },
@@ -58,7 +59,7 @@ describe('extension', () => {
   it("fetches a user's extension with the correct data", async () => {
     const globalAny = global as any;
     const expected = { id: 'test' };
-    globalAny.fetch = jest.fn().mockImplementation(() => Promise.resolve({ status: 200, json: () => Promise.resolve({ extensions: [expected]}) }));
+    globalAny.fetch = jest.fn().mockImplementation(() => Promise.resolve({ status: 200, json: () => Promise.resolve(expected) }));
     const actual = await fetchUserExtensionManifest(true, 'userId', 'secret', 'clientId', 'version');
     expect(actual).toEqual(expected);
   });
@@ -69,6 +70,7 @@ describe('extension', () => {
       bitsEnabled: manifest.bitsEnabled,
       clientId: manifest.id,
       description: manifest.description,
+      hasChatSupport: manifest.hasChatSupport,
       iconUrl: manifest.iconUrls['100x100'],
       iconUrls: { square100: manifest.iconUrls['100x100'] },
       id: manifest.id + ':' + index,

@@ -3,11 +3,12 @@ import { ExtensionState, ExtensionViewType } from '../constants/extension-coordi
 import { generateId } from './generate-id';
 import { toSnakeCase } from './case';
 
-export function generateManifest(baseUri: string, ownerName: string, name: string, types: string[]): ExtensionManifest {
+export function generateManifest(baseUri: string, ownerName: string, name: string, types: ExtensionViewType[]): ExtensionManifest {
   return {
     authorName: ownerName,
     bitsEnabled: false,
-    description: 'Description for ' + name,
+    description: 'This is a local-mode extension project, ' + name,
+    hasChatSupport: false,
     iconUrls: { "100x100": "https://media.forgecdn.net/avatars/158/128/636650453584584748.png" },
     id: generateId(30),
     name,

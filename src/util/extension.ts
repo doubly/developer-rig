@@ -43,6 +43,7 @@ export function createExtensionObject(
     bitsEnabled: manifest.bitsEnabled,
     clientId: manifest.id,
     description: manifest.description,
+    hasChatSupport: false,
     iconUrl: manifest.iconUrls['100x100'],
     iconUrls: { square100: manifest.iconUrls['100x100'] },
     id: manifest.id + ':' + index,

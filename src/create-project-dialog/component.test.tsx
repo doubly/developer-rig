@@ -1,5 +1,6 @@
 import { setupShallowTest } from '../tests/enzyme-util/shallow';
 import { CreateProjectDialog } from './component';
+import { ExtensionViewType } from '../constants/extension-coordinator';
 import { generateManifest } from '../util/generate-manifest';
 
 Math.random = () => .25;
@@ -76,7 +77,7 @@ describe('<CreateProjectDialog />', () => {
           frontendCommand: '',
           frontendFolderName: '',
           isLocal: true,
-          manifest: generateManifest('https://localhost.rig.twitch.tv:8080', login, value, ['panel']),
+          manifest: generateManifest('https://localhost.rig.twitch.tv:8080', login, value, [ExtensionViewType.Panel]),
           projectFolderPath: value,
           secret: 'test',
         });
@@ -97,6 +98,8 @@ describe('<CreateProjectDialog />', () => {
     });
     const { createProject } = api;
     const errorMessage = 'Test: ignore this error';
+    let { error } = console;
+    console.error = jest.fn();
     api.createProject = jest.fn().mockImplementation(() => {
       resolvePromise();
       return Promise.reject(new Error(errorMessage));
@@ -108,8 +111,10 @@ describe('<CreateProjectDialog />', () => {
     wrapper.find('input[value="none"]').simulate('change', { currentTarget: { name: 'codeGenerationOption', value: 'none' } });
     wrapper.find('.bottom-bar__save').simulate('click');
     await p;
+    [error, console.error] = [console.error, error];
     api.createProject = createProject;
     expect(wrapper.instance().state.errorMessage).toEqual(errorMessage);
+    expect(error).toHaveBeenCalledWith(new Error(errorMessage));
   });
 
   it('does not invoke saveHandler when save button is clicked', () => {

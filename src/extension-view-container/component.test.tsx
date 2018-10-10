@@ -16,6 +16,7 @@ const setupShallow = setupShallowTest(ExtensionViewContainer, () => ({
   extension: createExtensionForTest(),
   isLocal: true,
   mockApiEnabled: false,
+  isDisplayed: true,
 }));
 
 describe('<ExtensionViewContainer />', () => {

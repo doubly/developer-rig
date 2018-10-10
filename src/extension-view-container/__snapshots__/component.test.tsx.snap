@@ -12,6 +12,7 @@ ShallowWrapper {
             "bitsEnabled": false,
             "clientId": "mockClientId",
             "description": "description",
+            "hasChatSupport": false,
             "iconUrl": "iconUrl",
             "iconUrls": Object {
               "square100": "100x100",
@@ -64,12 +65,14 @@ ShallowWrapper {
           }
     }
     extensionViews={Array []}
+    isDisplayed={true}
     isLocal={true}
     manifest={
         Object {
             "authorName": "test",
             "bitsEnabled": true,
             "description": "test",
+            "hasChatSupport": false,
             "iconUrls": Object {
               "100x100": "test",
             },
@@ -180,6 +183,7 @@ ShallowWrapper {
                     onClick={[Function]}
           />
 </div>,
+        <Console />,
       ],
       "className": "view-container-wrapper",
     },
@@ -405,6 +409,15 @@ ShallowWrapper {
         },
         "type": "div",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -467,6 +480,7 @@ ShallowWrapper {
                         onClick={[Function]}
             />
 </div>,
+          <Console />,
         ],
         "className": "view-container-wrapper",
       },
@@ -691,6 +705,15 @@ ShallowWrapper {
             "type": [Function],
           },
           "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
         },
       ],
       "type": "div",

@@ -14,7 +14,7 @@ export class Console extends React.Component<{}, State> {
   private console: React.RefObject<HTMLDivElement>;
 
   public state: State = {
-    logHistory: window.rig.history || []
+    logHistory: window.rig.history || [],
   }
 
   constructor(props: {}) {
@@ -27,7 +27,7 @@ export class Console extends React.Component<{}, State> {
       const console = this.console.current;
       const { offsetHeight, scrollHeight } = console;
       console.scrollTop = Math.max(0, scrollHeight - offsetHeight);
-    }, 1);
+    });
     this.setState({
       logHistory: window.rig.history
     });

@@ -206,7 +206,7 @@ window['extension-coordinator'] = (function() {
           const { data } = event;
           if (data.action === SupervisorAction.SupervisorReady) {
             initSupervisedExtension();
-          } else if (data.action === 'extension-frame-authorize') {
+          } else if (data.action === 'twitch-ext-loaded') {
             iframe.style.removeProperty('display');
           }
 

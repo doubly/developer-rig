@@ -2,7 +2,6 @@ import * as React from 'react';
 import './component.sass';
 import { RigNav } from '../rig-nav';
 import { ExtensionViewContainer } from '../extension-view-container';
-import { Console } from '../console';
 import { ExtensionViewDialog, ExtensionViewDialogState } from '../extension-view-dialog';
 import { EditViewDialog, EditViewProps } from '../edit-view-dialog';
 import { ProductManagementViewContainer } from '../product-management-container';
@@ -41,6 +40,7 @@ interface State {
   showingCreateProjectDialog: boolean;
   idToEdit: string;
   selectedView: NavItem;
+  extensionsViewContainerKey: number;
   userId?: string;
   error?: string;
 }
@@ -55,14 +55,14 @@ export class RigComponent extends React.Component<Props, State> {
     showingCreateProjectDialog: false,
     idToEdit: '0',
     selectedView: NavItem.ProjectOverview,
+    extensionsViewContainerKey: 0,
   }
 
   get currentProjectIndex() { return this.state.projects.indexOf(this.state.currentProject); }
 
   constructor(props: Props) {
     super(props);
-    this.setLogin();
-    this.loadProjects();
+    this.setLogin().then(this.loadProjects);
   }
 
   public openEditViewHandler = (id: string) => {
@@ -167,9 +167,7 @@ export class RigComponent extends React.Component<Props, State> {
       localStorage.setItem('currentProjectIndex', previousProjects.length.toString());
       const projects = [...previousProjects, project];
       localStorage.setItem('projects', JSON.stringify(projects));
-      const selectedView = project.backendCommand || project.frontendFolderName ?
-        NavItem.ProjectOverview : NavItem.ExtensionViews;
-      return { currentProject: project, projects, selectedView, showingCreateProjectDialog: false };
+      return { currentProject: project, projects, selectedView: NavItem.ProjectOverview, showingCreateProjectDialog: false };
     });
   }
 
@@ -190,7 +188,8 @@ export class RigComponent extends React.Component<Props, State> {
     const selectedProject = this.state.projects[projectIndex];
     if (selectedProject !== this.state.currentProject) {
       await stopHosting();
-      this.setState({ currentProject: selectedProject });
+      this.setState({ currentProject: selectedProject, selectedView: NavItem.ProjectOverview });
+      this.refreshViews();
       localStorage.setItem('currentProjectIndex', this.currentProjectIndex.toString());
     }
   }
@@ -211,32 +210,25 @@ export class RigComponent extends React.Component<Props, State> {
           manifest={currentProject ? currentProject.manifest : null}
           selectedView={this.state.selectedView}
           viewerHandler={this.viewerHandler}
-          error={this.state.error} />
+          error={this.state.error}
+        />
         {this.state.error ? (
           <label>Something went wrong: {this.state.error}</label>
         ) : !this.props.session ? (
           <SignInDialog />
-        ) : !currentProject || this.state.showingCreateProjectDialog ? (
-          <CreateProjectDialog
-            userId={this.state.userId}
-            mustSave={!currentProject}
-            closeHandler={this.closeProjectDialog}
-            saveHandler={this.createProject}
-          />
-        ) : this.state.selectedView === NavItem.ProductManagement ? (
-          <ProductManagementViewContainer clientId={currentProject.manifest.id} />
-        ) : this.state.selectedView === NavItem.ProjectOverview ? (
-          <div>
-            <ProjectView
+        ) : (
+          <>
+            {this.state.selectedView === NavItem.ProductManagement && <ProductManagementViewContainer clientId={currentProject.manifest.id} />}
+            {this.state.selectedView === NavItem.ProjectOverview && currentProject && <ProjectView
               key={this.currentProjectIndex}
               rigProject={currentProject}
               userId={this.state.userId}
               onChange={this.updateProject}
-            />
-          </div>
-        ) : (
-          <div>
-            <ExtensionViewContainer
+              refreshViews={this.refreshViews}
+            />}
+            {currentProject && <ExtensionViewContainer
+              key={`ExtensionViewContainer${this.state.extensionsViewContainerKey}`}
+              isDisplayed={this.state.selectedView === NavItem.ExtensionViews}
               deleteExtensionViewHandler={this.deleteExtensionView}
               extensionViews={currentProject.extensionViews}
               isLocal={currentProject.isLocal}
@@ -244,7 +236,13 @@ export class RigComponent extends React.Component<Props, State> {
               secret={currentProject.secret}
               openEditViewHandler={this.openEditViewHandler}
               openExtensionViewHandler={this.openExtensionViewHandler}
-            />
+            />}
+            {(!currentProject || this.state.showingCreateProjectDialog) && <CreateProjectDialog
+              userId={this.state.userId}
+              mustSave={!currentProject}
+              closeHandler={this.closeProjectDialog}
+              saveHandler={this.createProject}
+            />}
             {this.state.showingExtensionsView && (
               <ExtensionViewDialog
                 channelId="999999999"
@@ -261,25 +259,28 @@ export class RigComponent extends React.Component<Props, State> {
                 saveViewHandler={this.editViewHandler}
               />
             )}
-            <Console />
-          </div>
+          </>
         )}
       </div>
     );
+  }
+
+  private refreshViews = () => {
+    this.setState((previousState) => ({ extensionsViewContainerKey: previousState.extensionsViewContainerKey + 1 }));
   }
 
   public updateExtensionViews(extensionViews: RigExtensionView[]) {
     this.updateProject({ extensionViews } as RigProject);
   }
 
-  private async loadProjects() {
+  private loadProjects = async () => {
     const projectsValue = localStorage.getItem('projects');
     if (projectsValue) {
       const projects = JSON.parse(projectsValue) as RigProject[];
       const currentProject = projects[Number(localStorage.getItem('currentProjectIndex') || 0)];
       const selectedView = currentProject.backendCommand || currentProject.frontendCommand || currentProject.frontendFolderName ?
         NavItem.ProjectOverview : NavItem.ExtensionViews;
-      Object.assign(this.state, { currentProject, projects, selectedView });
+      this.setState({ currentProject, projects, selectedView });
     } else if (process.env.EXT_CLIENT_ID && process.env.EXT_SECRET && process.env.EXT_VERSION) {
       const serializedExtensionViews = localStorage.getItem('extensionViews');
       const currentProject: RigProject = {
@@ -293,7 +294,7 @@ export class RigComponent extends React.Component<Props, State> {
         backendCommand: '',
       };
       const projects = [currentProject];
-      Object.assign(this.state, { currentProject, projects });
+      this.setState({ currentProject, projects });
       localStorage.setItem('projects', JSON.stringify(projects));
       localStorage.setItem('currentProjectIndex', '0');
       const { isLocal, secret, manifest: { id: clientId, version } } = currentProject;

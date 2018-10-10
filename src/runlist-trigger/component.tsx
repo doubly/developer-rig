@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { RunList, GenericResponse } from '../core/models/run-list';
 import './component.sass';
-
-const ExtensionOnContext = 'twitch-ext-context';
-const ExtensionOnAuthorized = 'twitch-ext-auth';
+import classNames = require('classnames');
+import { ExtensionAction } from '../constants/extension-coordinator';
+import { RunList, GenericResponse } from '../core/models/run-list';
 
 export interface PublicProps {
   runList: RunList;
@@ -76,13 +75,13 @@ export class RunListTrigger extends React.Component<Props, State>{
     switch (this.state.triggerTypeMap[trigger]) {
       case 'onContext':
         data = {
-          action: ExtensionOnContext,
+          action: ExtensionAction.TwitchExtContext,
           context: response,
         }
         break;
       case 'onAuthorized':
         data = {
-          action: ExtensionOnAuthorized,
+          action: ExtensionAction.TwitchExtAuth,
           auth: response,
         }
         break;
@@ -113,14 +112,14 @@ export class RunListTrigger extends React.Component<Props, State>{
   }
 
   public render() {
-    let textClassName = 'runlist-trigger__text';
+    const textClassName = classNames('runlist-trigger__text', {
+      'runlist-trigger__text--on': this.state.triggerState === TriggerState.Visible,
+      'runlist-trigger__text--fading': this.state.triggerState === TriggerState.Fading,
+    });
     if (this.state.triggerState === TriggerState.Visible) {
-      textClassName += ' runlist-trigger__text--on';
       setTimeout(() => {
         this.setState({ triggerState: TriggerState.Fading });
-      }, 1);
-    } else if (this.state.triggerState === TriggerState.Fading) {
-      textClassName += ' runlist-trigger__text--fading';
+      });
     }
     return (
       <div className='runlist-trigger'>

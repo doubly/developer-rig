@@ -323,7 +323,7 @@ export class ExtensionViewDialog extends React.Component<ExtensionViewDialogProp
                 <div className="option-div">
                   <label className="option-label">
                     <input id="isChatEnabled" type="checkbox" onChange={this.toggleIsChatEnabled} checked={this.state.isChatEnabled} />
-                    <label htmlFor="isChatEnabled">isChatEnabled</label>
+                    Is Chat Enabled
                   </label>
                 </div>
               </div>
